@@ -27,10 +27,6 @@
     <artifactId>jakartaee-api</artifactId>
     <name>Jakarta EE 8 Specification APIs</name>
     <description>Jakarta EE 8 Specification APIs</description>
- 
-    <properties>
-        <mojarra.version>2.3.9</mojarra.version>
-    </properties>
 
     <build>
         <plugins>
