@@ -51,9 +51,6 @@
                         <goals>
                             <goal>generate-pom</goal>
                         </goals>
-			<configuration>
-			    <groupId>jakarta.platform</groupId>
-			</configuration>
                     </execution>
                     <execution>
                         <id>attach-all-artifacts</id>
@@ -84,21 +81,25 @@
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>${servlet-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
             <version>${jsp-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.el</groupId>
             <artifactId>jakarta.el-api</artifactId>
             <version>${jakarta.el-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
             <version>${jstl-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <!-- work around for GLASSFISH-19861  -->
         <!--
@@ -106,67 +107,80 @@
             <groupId>jakarta.faces</groupId>
             <artifactId>jakarta.faces-api</artifactId>
             <version>${jakarta.faces-api.version}</version>
+            <optional>true</optional>
         </dependency>
         -->
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.faces</artifactId>
             <version>${mojarra.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>${jax-rs-api.impl.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.websocket</groupId>
             <artifactId>jakarta.websocket-api</artifactId>
             <version>${websocket-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.json</groupId>
             <artifactId>jakarta.json-api</artifactId>
             <version>${jsonp-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.json.bind</groupId>
             <artifactId>jakarta.json.bind-api</artifactId>
             <version>${json.bind-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
             <version>${jakarta.annotation-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.ejb</groupId>
             <artifactId>jakarta.ejb-api</artifactId>
             <version>${javax.ejb-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.transaction</groupId>
             <artifactId>jakarta.transaction-api</artifactId>
             <version>${javax.transaction-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>jakarta.persistence</artifactId>
             <version>${jakarta-persistence-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>${javax.validation.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.interceptor</groupId>
             <artifactId>jakarta.interceptor-api</artifactId>
             <version>${jakarta.interceptor-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
             <version>${cdi-api.version}</version>
+            <optional>true</optional>
             <exclusions>
               <exclusion>
                   <groupId>javax.inject</groupId>
@@ -178,16 +192,19 @@
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>${javax.inject.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.security.auth.message</groupId>
             <artifactId>jakarta.security.auth.message-api</artifactId>
             <version>${jakarta.security.auth.message-api.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.security.enterprise</groupId>
             <artifactId>jakarta.security.enterprise-api</artifactId>
             <version>${jakarta.security.enterprise-api.version}</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

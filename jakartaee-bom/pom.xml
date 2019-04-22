@@ -29,6 +29,29 @@
     <name>Jakarta EE API BOM</name>
     <description>Jakarta EE API BOM</description>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.glassfish.build</groupId>
+                <artifactId>glassfishbuild-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-pom</id>
+                        <goals>
+                            <goal>generate-pom</goal>
+                        </goals>
+                    </execution>                    
+                    <execution>
+                        <id>attach-all-artifacts</id>
+                        <goals>
+                            <goal>attach-all-artifacts</goal>
+                        </goals>
+                    </execution>  
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
             <!-- Web Profile -->
@@ -111,12 +134,6 @@
                 <groupId>javax.enterprise</groupId>
                 <artifactId>cdi-api</artifactId>
                 <version>${cdi-api.version}</version>
-                <exclusions>
-                  <exclusion>
-                      <groupId>javax.inject</groupId>
-                      <artifactId>javax.inject</artifactId>
-                  </exclusion>
-              </exclusions>
             </dependency>
             <dependency>
                 <groupId>javax.inject</groupId>
@@ -140,15 +157,9 @@
                 <artifactId>jakarta.jms-api</artifactId>
                 <version>${jms-api.version}</version>
             </dependency>
-            <!--
-		Using com.sun.mail:jakarta.mail instead of
-		jakarta.mail:jakarta.mail-api because javax.mail has a
-		dependency on com.sun.mail classes, but the pom does
-		not bring the dependency.
-            -->
             <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>jakarta.mail</artifactId>
+                <groupId>jakarta.mail</groupId>
+                <artifactId>jakarta.mail-api</artifactId>
                 <version>${mail.version}</version>
             </dependency>
             <dependency>
@@ -165,12 +176,6 @@
                 <groupId>jakarta.security.jacc</groupId>
                 <artifactId>jakarta.security.jacc-api</artifactId>
                 <version>${jakarta.security.jacc-api.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.servlet</groupId>
-                        <artifactId>javax.servlet-api</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>jakarta.enterprise.concurrent</groupId>
