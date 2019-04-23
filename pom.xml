@@ -117,7 +117,7 @@
                                     <directory>${project.basedir}/../doc-files</directory>
                                 </resource>
                             </resources>
-                            <outputDirectory>${project.build.directory}/apidocs/doc-files</outputDirectory>
+                            <outputDirectory>${project.build.directory}/site/apidocs/doc-files</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -137,7 +137,7 @@
                                     </includes>
                                 </resource>
                             </resources>
-                            <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
+                            <outputDirectory>${project.build.directory}/site/apidocs</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

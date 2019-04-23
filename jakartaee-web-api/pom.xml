@@ -101,18 +101,16 @@
             <optional>true</optional>
         </dependency>
         <!-- work around for GLASSFISH-19861  -->
-        <!--
-        <dependency>
-            <groupId>jakarta.faces</groupId>
-            <artifactId>jakarta.faces-api</artifactId>
-            <version>${jakarta.faces-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        -->
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.faces</artifactId>
             <version>${mojarra.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.faces</groupId>
+            <artifactId>jakarta.faces-api</artifactId>
+            <version>${jakarta.faces-api.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
