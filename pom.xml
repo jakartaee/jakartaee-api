@@ -283,7 +283,7 @@
             <resource>
                 <targetPath>META-INF/</targetPath>
                 <filtering>false</filtering>
-                <directory>${project.basedir}/../license</directory>
+                <directory>${project.basedir}/..</directory>
                 <includes>
                     <include>LICENSE.txt</include>
                 </includes>
