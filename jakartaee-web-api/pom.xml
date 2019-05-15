@@ -29,8 +29,8 @@
     <description>Jakarta EE 8 Web Profile Specification APIs</description>
  
     <properties>
-        <!-- we don't process the rpc classes inlined in ejb-api -->
-        <extra.excludes>javax/xml/rpc/**</extra.excludes>
+        <!-- we don't process the rpc classes inlined in ejb-api nor Jakarta XML Binding compile time dependency -->
+        <extra.excludes>javax/xml/rpc/**,javax/xml/bind/**</extra.excludes>
     </properties>
 
     <build>
@@ -50,6 +50,9 @@
                         <goals>
                             <goal>generate-pom</goal>
                         </goals>
+                        <configuration>
+                            <excludeDependencies>jakarta.xml.bind-api</excludeDependencies>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>attach-all-artifacts</id>
@@ -201,6 +204,14 @@
             <groupId>jakarta.security.enterprise</groupId>
             <artifactId>jakarta.security.enterprise-api</artifactId>
             <version>${jakarta.security.enterprise-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Compile-time dependencies -->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>${jakarta.xml.bind-api.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
