@@ -81,6 +81,10 @@
         <!-- Other dependencies -->
         <mojarra.version>2.3.9</mojarra.version>
         <copyright-plugin.version>1.50</copyright-plugin.version>
+
+        <!-- Compile-time dependencies -->
+        <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
+        <jakarta.xml.ws-api.version>2.3.2</jakarta.xml.ws-api.version>
     </properties>
 
 
@@ -249,7 +253,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.3</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <failOnError>false</failOnError>
                         <additionalparam>${javadoc.options}</additionalparam>

@@ -28,6 +28,11 @@
     <name>Jakarta EE 8 Specification APIs</name>
     <description>Jakarta EE 8 Specification APIs</description>
 
+    <properties>
+        <!-- we don't process the Jakarta XML Binding and Jakarta SOAP Web Services compile time dependencies -->
+        <extra.excludes>javax/xml/bind/**,javax/xml/ws/**</extra.excludes>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -45,6 +50,9 @@
                         <goals>
                             <goal>generate-pom</goal>
                         </goals>
+                        <configuration>
+                            <excludeDependencies>jakarta.xml.bind-api,jakarta.xml.ws-api</excludeDependencies>
+                        </configuration>
                     </execution>                    
                     <execution>
                         <id>attach-all-artifacts</id>
@@ -146,6 +154,20 @@
             <groupId>jakarta.xml.rpc</groupId>
             <artifactId>jakarta.xml.rpc-api</artifactId>
             <version>${jakarta.xml.rpc-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Compile-time dependencies -->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>${jakarta.xml.bind-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>${jakarta.xml.ws-api.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
