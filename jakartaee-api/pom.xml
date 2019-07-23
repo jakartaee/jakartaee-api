@@ -131,9 +131,9 @@
             <optional>true</optional>
         </dependency>
          <dependency>
-            <groupId>javax.batch</groupId>
-            <artifactId>javax.batch-api</artifactId>
-            <version>${javax.batch-api.version}</version>
+            <groupId>jakarta.batch</groupId>
+            <artifactId>jakarta.batch-api</artifactId>
+            <version>${jakarta.batch-api.version}</version>
             <optional>true</optional>
         </dependency>
 

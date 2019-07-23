@@ -183,9 +183,9 @@
                 <version>${concurrent-api.version}</version>
             </dependency>
              <dependency>
-                <groupId>javax.batch</groupId>
-                <artifactId>javax.batch-api</artifactId>
-                <version>${javax.batch-api.version}</version>
+                <groupId>jakarta.batch</groupId>
+                <artifactId>jakarta.batch-api</artifactId>
+                <version>${jakarta.batch-api.version}</version>
             </dependency>
 
             <!-- Optional APIs -->
