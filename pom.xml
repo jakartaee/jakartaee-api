@@ -47,7 +47,7 @@
         <jsp-api.version>2.3.5</jsp-api.version>
         <jstl-api.version>1.2.4</jstl-api.version>
         <jakarta.faces-api.version>2.3.1</jakarta.faces-api.version>
-        <jakarta.el-api.version>3.0.2</jakarta.el-api.version>
+        <jakarta.el-api.version>3.0.3</jakarta.el-api.version>
         <jaxb-api.version>2.3.2</jaxb-api.version>
         <jax-rs-api.impl.version>2.1.5</jax-rs-api.impl.version>
         <websocket-api.version>1.1.1</websocket-api.version>
