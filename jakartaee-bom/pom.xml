@@ -58,12 +58,12 @@
             <dependency>
                 <groupId>jakarta.servlet</groupId>
                 <artifactId>jakarta.servlet-api</artifactId>
-                <version>${servlet-api.version}</version>
+                <version>${jakarta.servlet-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.servlet.jsp</groupId>
                 <artifactId>jakarta.servlet.jsp-api</artifactId>
-                <version>${jsp-api.version}</version>
+                <version>${jakarta.servlet.jsp-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.el</groupId>
@@ -73,7 +73,7 @@
             <dependency>
                 <groupId>jakarta.servlet.jsp.jstl</groupId>
                 <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-                <version>${jstl-api.version}</version>
+                <version>${jakarta.servlet.jsp.jstl-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.faces</groupId>
@@ -83,22 +83,22 @@
             <dependency>
                 <groupId>jakarta.ws.rs</groupId>
                 <artifactId>jakarta.ws.rs-api</artifactId>
-                <version>${jax-rs-api.impl.version}</version>
+                <version>${jakarta.ws.rs-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.websocket</groupId>
                 <artifactId>jakarta.websocket-api</artifactId>
-                <version>${websocket-api.version}</version>
+                <version>${jakarta.websocket-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.json</groupId>
                 <artifactId>jakarta.json-api</artifactId>
-                <version>${jsonp-api.version}</version>
+                <version>${jakarta.json-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.json.bind</groupId>
                 <artifactId>jakarta.json.bind-api</artifactId>
-                <version>${json.bind-api.version}</version>
+                <version>${jakarta.json.bind-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.annotation</groupId>
@@ -108,12 +108,12 @@
             <dependency>
                 <groupId>jakarta.ejb</groupId>
                 <artifactId>jakarta.ejb-api</artifactId>
-                <version>${javax.ejb-api.version}</version>
+                <version>${jakarta.ejb-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.transaction</groupId>
                 <artifactId>jakarta.transaction-api</artifactId>
-                <version>${javax.transaction-api.version}</version>
+                <version>${jakarta.transaction-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.persistence</groupId>
@@ -121,9 +121,9 @@
                 <version>${jakarta-persistence-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version>${javax.validation.version}</version>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>${jakarta.validation-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.interceptor</groupId>
@@ -131,9 +131,9 @@
                 <version>${jakarta.interceptor-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.enterprise</groupId>
-                <artifactId>cdi-api</artifactId>
-                <version>${cdi-api.version}</version>
+                <groupId>jakarta.enterprise</groupId>
+                <artifactId>jakarta.enterprise.cdi-api</artifactId>
+                <version>${jakarta.enterprise.cdi-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.inject</groupId>
@@ -155,12 +155,17 @@
             <dependency>
                 <groupId>jakarta.jms</groupId>
                 <artifactId>jakarta.jms-api</artifactId>
-                <version>${jms-api.version}</version>
+                <version>${jakarta.messaging-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.mail</groupId>
                 <artifactId>jakarta.mail-api</artifactId>
-                <version>${mail.version}</version>
+                <version>${jakarta.mail-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>jakarta.mail</artifactId>
+                <version>${jakarta.mail-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.resource</groupId>
@@ -170,7 +175,7 @@
             <dependency>
                 <groupId>jakarta.management.j2ee</groupId>
                 <artifactId>jakarta.management.j2ee-api</artifactId>
-                <version>${javax.management.j2ee-api.version}</version>
+                <version>${jakarta.management.j2ee-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.security.jacc</groupId>
@@ -180,7 +185,7 @@
             <dependency>
                 <groupId>jakarta.enterprise.concurrent</groupId>
                 <artifactId>jakarta.enterprise.concurrent-api</artifactId>
-                <version>${concurrent-api.version}</version>
+                <version>${jakarta.enterprise.concurrent-api.version}</version>
             </dependency>
              <dependency>
                 <groupId>jakarta.batch</groupId>
@@ -192,7 +197,7 @@
             <dependency>
                 <groupId>jakarta.enterprise.deploy</groupId>
                 <artifactId>jakarta.enterprise.deploy-api</artifactId>
-                <version>${javax.enterprise.deploy-api.version}</version>
+                <version>${jakarta.enterprise.deploy-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.xml.registry</groupId>
