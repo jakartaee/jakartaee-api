@@ -27,7 +27,7 @@
     <artifactId>jakartaee-web-api</artifactId>
     <name>Jakarta EE 8 Web Profile Specification APIs</name>
     <description>Jakarta EE 8 Web Profile Specification APIs</description>
- 
+
     <properties>
         <!-- we don't process the rpc classes inlined in ejb-api nor Jakarta XML Binding compile time dependency -->
         <extra.excludes>javax/xml/rpc/**,javax/xml/bind/**</extra.excludes>
@@ -159,8 +159,8 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>jakarta.persistence</artifactId>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
             <version>${jakarta-persistence-api.version}</version>
             <optional>true</optional>
         </dependency>
