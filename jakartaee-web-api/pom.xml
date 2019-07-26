@@ -161,7 +161,7 @@
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
-            <version>${jakarta-persistence-api.version}</version>
+            <version>${jakarta.persistence-api.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
