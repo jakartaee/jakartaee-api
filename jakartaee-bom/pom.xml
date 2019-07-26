@@ -40,13 +40,13 @@
                         <goals>
                             <goal>generate-pom</goal>
                         </goals>
-                    </execution>                    
+                    </execution>
                     <execution>
                         <id>attach-all-artifacts</id>
                         <goals>
                             <goal>attach-all-artifacts</goal>
                         </goals>
-                    </execution>  
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
@@ -116,8 +116,8 @@
                 <version>${javax.transaction-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>jakarta.persistence</artifactId>
+                <groupId>jakarta.persistence</groupId>
+                <artifactId>jakarta.persistence-api</artifactId>
                 <version>${jakarta-persistence-api.version}</version>
             </dependency>
             <dependency>
