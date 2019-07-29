@@ -183,15 +183,15 @@
             <optional>true</optional>
             <exclusions>
               <exclusion>
-                  <groupId>javax.inject</groupId>
-                  <artifactId>javax.inject</artifactId>
+                  <groupId>jakarta.inject</groupId>
+                  <artifactId>jakarta.inject-api</artifactId>
               </exclusion>
           </exclusions>
         </dependency>
         <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>${javax.inject.version}</version>
+            <groupId>jakarta.inject</groupId>
+            <artifactId>jakarta.inject-api</artifactId>
+            <version>${jakarta.inject.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
