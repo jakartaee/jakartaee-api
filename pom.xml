@@ -58,7 +58,7 @@
         <jakarta.validation-api.version>2.0.1</jakarta.validation-api.version>
         <jakarta.interceptor-api.version>1.2.5</jakarta.interceptor-api.version>
         <jakarta.enterprise.cdi-api.version>2.0.1</jakarta.enterprise.cdi-api.version>
-        <javax.inject.version>1</javax.inject.version>
+        <jakarta.inject.version>1.0</jakarta.inject.version>
         <jakarta.security.auth.message-api.version>1.1.3</jakarta.security.auth.message-api.version>
         <jakarta.security.enterprise-api.version>1.0.2</jakarta.security.enterprise-api.version>
         <jakarta.ws.rs-api.version>2.1.5</jakarta.ws.rs-api.version>
