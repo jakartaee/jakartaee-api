@@ -53,18 +53,31 @@
                         <configuration>
                             <excludeDependencies>jakarta.xml.bind-api,jakarta.xml.ws-api</excludeDependencies>
                         </configuration>
-                    </execution>                    
+                    </execution>
                     <execution>
                         <id>attach-all-artifacts</id>
                         <goals>
                             <goal>attach-all-artifacts</goal>
                         </goals>
-                    </execution>  
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-            
+
     <dependencies>
         <!-- Web Profile API  -->
         <dependency>
@@ -73,15 +86,15 @@
             <version>${jakartaee.version}</version>
             <optional>true</optional>
         </dependency>
- 
+
         <!-- work around for GLASSFISH-19861  -->
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.faces</artifactId>
             <version>${mojarra.version}</version>
             <optional>true</optional>
-        </dependency>        
- 
+        </dependency>
+
         <dependency>
             <groupId>jakarta.jms</groupId>
             <artifactId>jakarta.jms-api</artifactId>
