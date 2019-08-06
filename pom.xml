@@ -44,7 +44,7 @@
 
         <!-- Web Profile -->
         <jakarta.servlet-api.version>4.0.3</jakarta.servlet-api.version>
-        <jakarta.servlet.jsp-api.version>2.3.5</jakarta.servlet.jsp-api.version>
+        <jakarta.servlet.jsp-api.version>2.3.6</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>1.2.4</jakarta.servlet.jsp.jstl-api.version>
         <jakarta.faces-api.version>2.3.1</jakarta.faces-api.version>
         <jakarta.el-api.version>3.0.3</jakarta.el-api.version>
