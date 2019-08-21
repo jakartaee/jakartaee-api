@@ -178,9 +178,9 @@
                 <version>${jakarta.management.j2ee-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.security.jacc</groupId>
-                <artifactId>jakarta.security.jacc-api</artifactId>
-                <version>${jakarta.security.jacc-api.version}</version>
+                <groupId>jakarta.authorization</groupId>
+                <artifactId>jakarta.authorization-api</artifactId>
+                <version>${jakarta.authorization-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.enterprise.concurrent</groupId>

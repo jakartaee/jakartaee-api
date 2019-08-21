@@ -39,14 +39,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jakartaee.version>8.0.0-SNAPSHOT</jakartaee.version>
+        <jakartaee.version>8.0.0</jakartaee.version>
         <extra.excludes />
 
         <!-- Web Profile -->
         <jakarta.servlet-api.version>4.0.3</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>2.3.6</jakarta.servlet.jsp-api.version>
-        <jakarta.servlet.jsp.jstl-api.version>1.2.4</jakarta.servlet.jsp.jstl-api.version>
-        <jakarta.faces-api.version>2.3.1</jakarta.faces-api.version>
+        <jakarta.servlet.jsp.jstl-api.version>1.2.7</jakarta.servlet.jsp.jstl-api.version>
+        <jakarta.faces-api.version>2.3.2</jakarta.faces-api.version>
         <jakarta.el-api.version>3.0.3</jakarta.el-api.version>
         <jakarta.websocket-api.version>1.1.2</jakarta.websocket-api.version>
         <jakarta.json-api.version>1.1.6</jakarta.json-api.version>
@@ -68,7 +68,7 @@
         <jakarta.mail-api.version>1.6.4</jakarta.mail-api.version>
         <jakarta.resource-api.version>1.7.4</jakarta.resource-api.version>
         <jakarta.management.j2ee-api.version>1.1.4</jakarta.management.j2ee-api.version>
-        <jakarta.security.jacc-api.version>1.6.2</jakarta.security.jacc-api.version>
+        <jakarta.authorization-api.version>1.5.0</jakarta.authorization-api.version>
         <jakarta.enterprise.concurrent-api.version>1.1.2</jakarta.enterprise.concurrent-api.version>
         <jakarta.batch-api.version>1.0.2</jakarta.batch-api.version>
 
