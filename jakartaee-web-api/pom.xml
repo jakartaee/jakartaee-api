@@ -24,7 +24,7 @@
         <artifactId>jakartaee-api-parent</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>jakartaee-web-api</artifactId>
+    <artifactId>jakarta.jakartaee-web-api</artifactId>
     <name>Jakarta EE 8 Web Profile Specification APIs</name>
     <description>Jakarta EE 8 Web Profile Specification APIs</description>
 
