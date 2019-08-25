@@ -24,7 +24,7 @@
         <artifactId>jakartaee-api-parent</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>jakartaee-bom</artifactId>
+    <artifactId>jakarta.jakartaee-bom</artifactId>
     <packaging>pom</packaging>
     <name>Jakarta EE API BOM</name>
     <description>Jakarta EE API BOM</description>
