@@ -236,7 +236,7 @@
                                     <version>1.0</version>
                                 </parent>
                                 <groupId>jakarta.platform</groupId>
-                                <artifactId>${projet.artifactId}</artifactId>
+                                <artifactId>${project.artifactId}</artifactId>
                                 <version>${jakartaee.version}</version>
                             </configuration>
                         </execution>

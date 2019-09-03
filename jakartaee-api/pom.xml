@@ -82,7 +82,7 @@
         <!-- Web Profile API  -->
         <dependency>
             <groupId>jakarta.platform</groupId>
-            <artifactId>jakartaee-web-api</artifactId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>${project.version}</version>
             <optional>true</optional>
         </dependency>
