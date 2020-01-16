@@ -22,9 +22,9 @@
     <parent>
         <groupId>jakarta.platform</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>8.0.0-SNAPSHOT</version>
+        <version>9.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>jakartaee-bom</artifactId>
+    <artifactId>jakarta.jakartaee-bom</artifactId>
     <packaging>pom</packaging>
     <name>Jakarta EE API BOM</name>
     <description>Jakarta EE API BOM</description>
@@ -118,7 +118,7 @@
             <dependency>
                 <groupId>jakarta.persistence</groupId>
                 <artifactId>jakarta.persistence-api</artifactId>
-                <version>${jakarta-persistence-api.version}</version>
+                <version>${jakarta.persistence-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.validation</groupId>
@@ -155,7 +155,7 @@
             <dependency>
                 <groupId>jakarta.jms</groupId>
                 <artifactId>jakarta.jms-api</artifactId>
-                <version>${jakarta.messaging-api.version}</version>
+                <version>${jakarta.jms-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.mail</groupId>
@@ -178,9 +178,9 @@
                 <version>${jakarta.management.j2ee-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.security.jacc</groupId>
-                <artifactId>jakarta.security.jacc-api</artifactId>
-                <version>${jakarta.security.jacc-api.version}</version>
+                <groupId>jakarta.authorization</groupId>
+                <artifactId>jakarta.authorization-api</artifactId>
+                <version>${jakarta.authorization-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.enterprise.concurrent</groupId>

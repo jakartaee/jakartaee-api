@@ -22,9 +22,9 @@
     <parent>
         <groupId>jakarta.platform</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>8.0.0-SNAPSHOT</version>
+        <version>9.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>jakartaee-api</artifactId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
     <name>Jakarta EE 8 Specification APIs</name>
     <description>Jakarta EE 8 Specification APIs</description>
 
@@ -82,8 +82,8 @@
         <!-- Web Profile API  -->
         <dependency>
             <groupId>jakarta.platform</groupId>
-            <artifactId>jakartaee-web-api</artifactId>
-            <version>${jakartaee.version}</version>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>${project.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -132,9 +132,9 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>jakarta.security.jacc</groupId>
-            <artifactId>jakarta.security.jacc-api</artifactId>
-            <version>${jakarta.security.jacc-api.version}</version>
+            <groupId>jakarta.authorization</groupId>
+            <artifactId>jakarta.authorization-api</artifactId>
+            <version>${jakarta.authorization-api.version}</version>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
