@@ -30,8 +30,7 @@
 
     <properties>
         <!-- we don't process the Jakarta XML Binding and Jakarta SOAP Web Services compile time dependencies -->
-        <!-- Part of our jar now?  -->
-        <!-- <extra.excludes>jakarta/xml/bind/**,jakarta/xml/ws/**</extra.excludes>  -->
+        <extra.excludes>jakarta/xml/bind/**,jakarta/xml/ws/**</extra.excludes>
     </properties>
 
     <build>
@@ -52,8 +51,7 @@
                             <goal>generate-pom</goal>
                         </goals>
                         <configuration>
-                            <!-- Part of our jar now?  -->
-                            <!-- <excludeDependencies>jakarta.xml.bind-api,jakarta.xml.ws-api</excludeDependencies>  -->
+                            <excludeDependencies>jakarta.xml.bind-api,jakarta.xml.ws-api</excludeDependencies>
                         </configuration>
                     </execution>
                     <execution>
@@ -89,14 +87,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- work around for GLASSFISH-19861  -->
-        <!-- <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>jakarta.faces</artifactId>
-            <version>${mojarra.version}</version>
-            <optional>true</optional>
-        </dependency>  -->
-
         <dependency>
             <groupId>jakarta.jms</groupId>
             <artifactId>jakarta.jms-api</artifactId>
@@ -109,6 +99,8 @@
             dependency on com.sun.mail classes, but the pom does
             not bring in the dependency.
         -->
+
+        <!-- TODO Why isn't jakarta.mail ending up in the jar file?  -->
         <dependency>
             <groupId>jakarta.mail</groupId>
             <artifactId>jakarta.mail-api</artifactId>
@@ -155,7 +147,6 @@
         <!-- Optional APIs -->
 
         <!-- Compile-time dependencies -->
-        <!-- Required dependency now? More than just Compile-time? -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
@@ -168,5 +159,13 @@
             <version>${jakarta.xml.ws-api.version}</version>
             <optional>true</optional>
         </dependency>
+        <!-- work around for GLASSFISH-19861  -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.faces</artifactId>
+            <version>${mojarra.version}</version>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 </project>

@@ -74,10 +74,10 @@
         <!-- Optional APIs -->
 
         <!-- Other dependencies -->
-        <mojarra.version>2.3.14</mojarra.version> <!-- TODO  Still required? -->
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
+        <mojarra.version>2.3.14</mojarra.version> <!-- TODO  -->
         <jakarta.xml.bind-api.version>3.0.0-RC1</jakarta.xml.bind-api.version>
         <jakarta.xml.ws-api.version>3.0.0-RC1</jakarta.xml.ws-api.version>
     </properties>
@@ -265,6 +265,7 @@
                         <links>
                             <link>http://docs.oracle.com/javase/8/docs/api/</link>
                             <link>http://docs.oracle.com/javaee/7/api/</link>
+                            <!-- TODO link for jakarta ee 8 api?  -->
                         </links>
                         <tags>
                             <tag>

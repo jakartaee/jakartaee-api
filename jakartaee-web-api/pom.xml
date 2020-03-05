@@ -30,8 +30,7 @@
 
     <properties>
         <!-- we don't process the rpc classes inlined in ejb-api nor Jakarta XML Binding compile time dependency -->
-        <!-- Part of our jar now?  -->
-        <!-- <extra.excludes>jakarta/xml/rpc/**,jakarta/xml/bind/**</extra.excludes>  -->
+        <extra.excludes>jakarta/xml/rpc/**,jakarta/xml/bind/**</extra.excludes>
     </properties>
 
     <build>
@@ -52,8 +51,7 @@
                             <goal>generate-pom</goal>
                         </goals>
                         <configuration>
-                            <!-- Part of our jar now?  -->
-                            <!-- <excludeDependencies>jakarta.xml.bind-api</excludeDependencies>  -->
+                            <excludeDependencies>jakarta.xml.bind-api</excludeDependencies>
                         </configuration>
                     </execution>
                     <execution>
@@ -108,13 +106,6 @@
             <version>${jakarta.servlet.jsp.jstl-api.version}</version>
             <optional>true</optional>
         </dependency>
-        <!-- work around for GLASSFISH-19861  -->
-        <!-- <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>jakarta.faces</artifactId>
-            <version>${mojarra.version}</version>
-            <optional>true</optional>
-        </dependency>  -->
         <dependency>
             <groupId>jakarta.faces</groupId>
             <artifactId>jakarta.faces-api</artifactId>
@@ -213,12 +204,19 @@
         </dependency>
 
         <!-- Compile-time dependencies -->
-        <!-- Required dependency now? More than just Compile-time? -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
             <version>${jakarta.xml.bind-api.version}</version>
             <optional>true</optional>
         </dependency>
+        <!-- work around for GLASSFISH-19861  -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.faces</artifactId>
+            <version>${mojarra.version}</version>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 </project>
