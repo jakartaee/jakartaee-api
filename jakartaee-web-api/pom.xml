@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2012, 2019 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2012, 2020 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -25,12 +25,13 @@
         <version>9.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>jakarta.jakartaee-web-api</artifactId>
-    <name>Jakarta EE 8 Web Profile Specification APIs</name>
-    <description>Jakarta EE 8 Web Profile Specification APIs</description>
+    <name>Jakarta EE Web Profile Specification APIs</name>
+    <description>Jakarta EE Web Profile Specification APIs</description>
 
     <properties>
         <!-- we don't process the rpc classes inlined in ejb-api nor Jakarta XML Binding compile time dependency -->
-        <extra.excludes>javax/xml/rpc/**,javax/xml/bind/**</extra.excludes>
+        <!-- Part of our jar now?  -->
+        <!-- <extra.excludes>jakarta/xml/rpc/**,jakarta/xml/bind/**</extra.excludes>  -->
     </properties>
 
     <build>
@@ -51,7 +52,8 @@
                             <goal>generate-pom</goal>
                         </goals>
                         <configuration>
-                            <excludeDependencies>jakarta.xml.bind-api</excludeDependencies>
+                            <!-- Part of our jar now?  -->
+                            <!-- <excludeDependencies>jakarta.xml.bind-api</excludeDependencies>  -->
                         </configuration>
                     </execution>
                     <execution>
@@ -107,12 +109,12 @@
             <optional>true</optional>
         </dependency>
         <!-- work around for GLASSFISH-19861  -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.faces</artifactId>
             <version>${mojarra.version}</version>
             <optional>true</optional>
-        </dependency>
+        </dependency>  -->
         <dependency>
             <groupId>jakarta.faces</groupId>
             <artifactId>jakarta.faces-api</artifactId>
@@ -211,6 +213,7 @@
         </dependency>
 
         <!-- Compile-time dependencies -->
+        <!-- Required dependency now? More than just Compile-time? -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>

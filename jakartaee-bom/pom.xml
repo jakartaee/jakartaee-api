@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 1997, 2019 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 1997, 2020 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -173,11 +173,6 @@
                 <version>${jakarta.resource-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.management.j2ee</groupId>
-                <artifactId>jakarta.management.j2ee-api</artifactId>
-                <version>${jakarta.management.j2ee-api.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>jakarta.authorization</groupId>
                 <artifactId>jakarta.authorization-api</artifactId>
                 <version>${jakarta.authorization-api.version}</version>
@@ -194,21 +189,6 @@
             </dependency>
 
             <!-- Optional APIs -->
-            <dependency>
-                <groupId>jakarta.enterprise.deploy</groupId>
-                <artifactId>jakarta.enterprise.deploy-api</artifactId>
-                <version>${jakarta.enterprise.deploy-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.registry</groupId>
-                <artifactId>jakarta.xml.registry-api</artifactId>
-                <version>${jakarta.xml.registry-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.rpc</groupId>
-                <artifactId>jakarta.xml.rpc-api</artifactId>
-                <version>${jakarta.xml.rpc-api.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
