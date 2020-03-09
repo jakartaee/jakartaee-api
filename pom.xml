@@ -66,7 +66,7 @@
         <!--  Full platform -->
         <jakarta.jms-api.version>3.0.0-RC1</jakarta.jms-api.version>
         <jakarta.activation-api.version>2.0.0-rc1</jakarta.activation-api.version>
-        <jakarta.mail-api.version>2.0.0-RC2</jakarta.mail-api.version>
+        <jakarta.mail-api.version>2.0.0-RC3</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.0.0-RC1</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.0.0-RC1</jakarta.authorization-api.version>
         <jakarta.enterprise.concurrent-api.version>2.0.0-RC1</jakarta.enterprise.concurrent-api.version>
