@@ -46,7 +46,7 @@
         <jakarta.servlet-api.version>5.0.0-M1</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>3.0.0-M1</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>2.0.0-RC1</jakarta.servlet.jsp.jstl-api.version>
-        <jakarta.faces-api.version>2.3.2</jakarta.faces-api.version> <!-- TODO  -->
+        <jakarta.faces-api.version>3.0.0-RC1</jakarta.faces-api.version>
         <jakarta.el-api.version>4.0.0-RC1</jakarta.el-api.version>
         <jakarta.websocket-api.version>2.0.0-M1</jakarta.websocket-api.version>
         <jakarta.json-api.version>2.0.0-RC1</jakarta.json-api.version>
@@ -63,23 +63,26 @@
         <jakarta.security.enterprise-api.version>2.0.0-RC2</jakarta.security.enterprise-api.version>
         <jakarta.ws.rs-api.version>3.0.0-M1</jakarta.ws.rs-api.version>
 
-      <!--  Full platform -->
+        <!--  Full platform -->
         <jakarta.jms-api.version>3.0.0-RC1</jakarta.jms-api.version>
-        <jakarta.mail-api.version>2.0.0-RC1</jakarta.mail-api.version>
+        <jakarta.activation-api.version>2.0.0-rc1</jakarta.activation-api.version>
+        <jakarta.mail-api.version>2.0.0-RC2</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.0.0-RC1</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.0.0-RC1</jakarta.authorization-api.version>
         <jakarta.enterprise.concurrent-api.version>2.0.0-RC1</jakarta.enterprise.concurrent-api.version>
         <jakarta.batch-api.version>2.0.0-M1</jakarta.batch-api.version>
 
         <!-- Optional APIs -->
+        <jakarta.xml.bind-api.version>3.0.0-RC1</jakarta.xml.bind-api.version>
+        <jakarta.xml.ws-api.version>3.0.0-RC1</jakarta.xml.ws-api.version>
+        <jakarta.xml.soap-api.version>2.0.0-RC1</jakarta.xml.soap-api.version>
+        <jakarta.jws-api.version>3.0.0-rc1</jakarta.jws-api.version>
 
         <!-- Other dependencies -->
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
-        <mojarra.version>2.3.14</mojarra.version> <!-- TODO  -->
-        <jakarta.xml.bind-api.version>3.0.0-RC1</jakarta.xml.bind-api.version>
-        <jakarta.xml.ws-api.version>3.0.0-RC1</jakarta.xml.ws-api.version>
+        <mojarra.version>3.0.0</mojarra.version>
     </properties>
 
 
@@ -263,9 +266,8 @@
 
                         </bottom>
                         <links>
-                            <link>http://docs.oracle.com/javase/8/docs/api/</link>
-                            <link>http://docs.oracle.com/javaee/7/api/</link>
-                            <!-- TODO link for jakarta ee 8 api?  -->
+                            <link>https://docs.oracle.com/javase/8/docs/api/</link>
+                            <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
                         </links>
                         <tags>
                             <tag>

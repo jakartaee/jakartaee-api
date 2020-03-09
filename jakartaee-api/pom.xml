@@ -93,6 +93,13 @@
             <version>${jakarta.jms-api.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>${jakarta.activation-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
         <!--
             Using com.sun.mail:jakarta.mail instead of
             jakarta.mail:jakarta.mail-api because jakarta.mail has a
@@ -100,16 +107,9 @@
             not bring in the dependency.
         -->
 
-        <!-- TODO Why isn't jakarta.mail ending up in the jar file?  -->
         <dependency>
             <groupId>jakarta.mail</groupId>
             <artifactId>jakarta.mail-api</artifactId>
-            <version>${jakarta.mail-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>jakarta.mail</artifactId>
             <version>${jakarta.mail-api.version}</version>
             <optional>true</optional>
         </dependency>
@@ -145,8 +145,6 @@
         </dependency>
 
         <!-- Optional APIs -->
-
-        <!-- Compile-time dependencies -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
@@ -159,6 +157,22 @@
             <version>${jakarta.xml.ws-api.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>jakarta.jws</groupId>
+            <artifactId>jakarta.jws-api</artifactId>
+            <version>${jakarta.jws-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.soap</groupId>
+            <artifactId>jakarta.xml.soap-api</artifactId>
+            <version>${jakarta.xml.soap-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+
+
+        <!-- Compile-time dependencies -->
         <!-- work around for GLASSFISH-19861  -->
         <dependency>
             <groupId>org.glassfish</groupId>
@@ -166,6 +180,13 @@
             <version>${mojarra.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>${jakarta.mail-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
 
     </dependencies>
 </project>
