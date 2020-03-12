@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2012, 2019 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2012, 2020 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -25,12 +25,12 @@
         <version>9.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>jakarta.jakartaee-api</artifactId>
-    <name>Jakarta EE 8 Specification APIs</name>
-    <description>Jakarta EE 8 Specification APIs</description>
+    <name>Jakarta EE Specification APIs</name>
+    <description>Jakarta EE Specification APIs</description>
 
     <properties>
         <!-- we don't process the Jakarta XML Binding and Jakarta SOAP Web Services compile time dependencies -->
-        <extra.excludes>javax/xml/bind/**,javax/xml/ws/**</extra.excludes>
+        <extra.excludes>jakarta/xml/bind/**,jakarta/xml/ws/**</extra.excludes>
     </properties>
 
     <build>
@@ -87,35 +87,22 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- work around for GLASSFISH-19861  -->
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>jakarta.faces</artifactId>
-            <version>${mojarra.version}</version>
-            <optional>true</optional>
-        </dependency>
-
         <dependency>
             <groupId>jakarta.jms</groupId>
             <artifactId>jakarta.jms-api</artifactId>
             <version>${jakarta.jms-api.version}</version>
             <optional>true</optional>
         </dependency>
-        <!--
-            Using com.sun.mail:jakarta.mail instead of
-            jakarta.mail:jakarta.mail-api because javax.mail has a
-            dependency on com.sun.mail classes, but the pom does
-            not bring the dependency.
-        -->
+        <dependency>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>${jakarta.activation-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
         <dependency>
             <groupId>jakarta.mail</groupId>
             <artifactId>jakarta.mail-api</artifactId>
-            <version>${jakarta.mail-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>jakarta.mail</artifactId>
             <version>${jakarta.mail-api.version}</version>
             <optional>true</optional>
         </dependency>
@@ -126,20 +113,14 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>jakarta.management.j2ee</groupId>
-            <artifactId>jakarta.management.j2ee-api</artifactId>
-            <version>${jakarta.management.j2ee-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>jakarta.authorization</groupId>
             <artifactId>jakarta.authorization-api</artifactId>
             <version>${jakarta.authorization-api.version}</version>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>javax.servlet-api</artifactId>
+                    <groupId>jakarta.servlet</groupId>
+                    <artifactId>jakarta.servlet-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -158,26 +139,6 @@
 
         <!-- Optional APIs -->
         <dependency>
-            <groupId>jakarta.enterprise.deploy</groupId>
-            <artifactId>jakarta.enterprise.deploy-api</artifactId>
-            <version>${jakarta.enterprise.deploy-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.registry</groupId>
-            <artifactId>jakarta.xml.registry-api</artifactId>
-            <version>${jakarta.xml.registry-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.rpc</groupId>
-            <artifactId>jakarta.xml.rpc-api</artifactId>
-            <version>${jakarta.xml.rpc-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-
-        <!-- Compile-time dependencies -->
-        <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
             <version>${jakarta.xml.bind-api.version}</version>
@@ -189,5 +150,42 @@
             <version>${jakarta.xml.ws-api.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>jakarta.jws</groupId>
+            <artifactId>jakarta.jws-api</artifactId>
+            <version>${jakarta.jws-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.soap</groupId>
+            <artifactId>jakarta.xml.soap-api</artifactId>
+            <version>${jakarta.xml.soap-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+
+
+        <!-- Compile-time dependencies -->
+        <!-- work around for GLASSFISH-19861  -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.faces</artifactId>
+            <version>${mojarra.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <!--
+            Using com.sun.mail:jakarta.mail instead of
+            jakarta.mail:jakarta.mail-api because jakarta.mail has a
+            dependency on com.sun.mail classes, but the pom does
+            not bring in the dependency.
+        -->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>${jakarta.mail-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+
     </dependencies>
 </project>

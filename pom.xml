@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 1997, 2019 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 1997, 2020 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -43,47 +43,46 @@
         <extra.excludes />
 
         <!-- Web Profile -->
-        <jakarta.servlet-api.version>4.0.3</jakarta.servlet-api.version>
-        <jakarta.servlet.jsp-api.version>2.3.6</jakarta.servlet.jsp-api.version>
-        <jakarta.servlet.jsp.jstl-api.version>1.2.7</jakarta.servlet.jsp.jstl-api.version>
-        <jakarta.faces-api.version>2.3.2</jakarta.faces-api.version>
-        <jakarta.el-api.version>3.0.3</jakarta.el-api.version>
-        <jakarta.websocket-api.version>1.1.2</jakarta.websocket-api.version>
-        <jakarta.json-api.version>1.1.6</jakarta.json-api.version>
-        <jakarta.json.bind-api.version>1.0.2</jakarta.json.bind-api.version>
-        <jakarta.annotation-api.version>1.3.5</jakarta.annotation-api.version>
-        <jakarta.ejb-api.version>3.2.6</jakarta.ejb-api.version>
-        <jakarta.transaction-api.version>1.3.3</jakarta.transaction-api.version>
-        <jakarta.persistence-api.version>2.2.3</jakarta.persistence-api.version>
-        <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
-        <jakarta.interceptor-api.version>1.2.5</jakarta.interceptor-api.version>
-        <jakarta.enterprise.cdi-api.version>2.0.2</jakarta.enterprise.cdi-api.version>
-        <jakarta.inject.version>1.0</jakarta.inject.version>
-        <jakarta.security.auth.message-api.version>1.1.3</jakarta.security.auth.message-api.version>
-        <jakarta.security.enterprise-api.version>1.0.2</jakarta.security.enterprise-api.version>
-        <jakarta.ws.rs-api.version>2.1.6</jakarta.ws.rs-api.version>
+        <jakarta.servlet-api.version>5.0.0-M1</jakarta.servlet-api.version>
+        <jakarta.servlet.jsp-api.version>3.0.0-M1</jakarta.servlet.jsp-api.version>
+        <jakarta.servlet.jsp.jstl-api.version>2.0.0-RC1</jakarta.servlet.jsp.jstl-api.version>
+        <jakarta.faces-api.version>3.0.0-RC1</jakarta.faces-api.version>
+        <jakarta.el-api.version>4.0.0-RC1</jakarta.el-api.version>
+        <jakarta.websocket-api.version>2.0.0-M1</jakarta.websocket-api.version>
+        <jakarta.json-api.version>2.0.0-RC1</jakarta.json-api.version>
+        <jakarta.json.bind-api.version>2.0.0-RC1</jakarta.json.bind-api.version>
+        <jakarta.annotation-api.version>2.0.0-RC1</jakarta.annotation-api.version>
+        <jakarta.ejb-api.version>4.0.0-RC1</jakarta.ejb-api.version>
+        <jakarta.transaction-api.version>2.0.0-RC1</jakarta.transaction-api.version>
+        <jakarta.persistence-api.version>3.0.0-RC1</jakarta.persistence-api.version>
+        <jakarta.validation-api.version>3.0.0-M1</jakarta.validation-api.version>
+        <jakarta.interceptor-api.version>2.0.0-RC2</jakarta.interceptor-api.version>
+        <jakarta.enterprise.cdi-api.version>3.0.0-M1</jakarta.enterprise.cdi-api.version>
+        <jakarta.inject.version>2.0.0-RC2</jakarta.inject.version>
+        <jakarta.security.auth.message-api.version>2.0.0-RC1</jakarta.security.auth.message-api.version>
+        <jakarta.security.enterprise-api.version>2.0.0-RC2</jakarta.security.enterprise-api.version>
+        <jakarta.ws.rs-api.version>3.0.0-M1</jakarta.ws.rs-api.version>
 
-      <!--  Full platform -->
-        <jakarta.jms-api.version>2.0.3</jakarta.jms-api.version>
-        <jakarta.mail-api.version>1.6.4</jakarta.mail-api.version>
-        <jakarta.resource-api.version>1.7.4</jakarta.resource-api.version>
-        <jakarta.management.j2ee-api.version>1.1.4</jakarta.management.j2ee-api.version>
-        <jakarta.authorization-api.version>1.5.0</jakarta.authorization-api.version>
-        <jakarta.enterprise.concurrent-api.version>1.1.2</jakarta.enterprise.concurrent-api.version>
-        <jakarta.batch-api.version>1.0.2</jakarta.batch-api.version>
+        <!--  Full platform -->
+        <jakarta.jms-api.version>3.0.0-RC1</jakarta.jms-api.version>
+        <jakarta.activation-api.version>2.0.0-rc1</jakarta.activation-api.version>
+        <jakarta.mail-api.version>2.0.0-RC3</jakarta.mail-api.version>
+        <jakarta.resource-api.version>2.0.0-RC1</jakarta.resource-api.version>
+        <jakarta.authorization-api.version>2.0.0-RC1</jakarta.authorization-api.version>
+        <jakarta.enterprise.concurrent-api.version>2.0.0-RC1</jakarta.enterprise.concurrent-api.version>
+        <jakarta.batch-api.version>2.0.0-M1</jakarta.batch-api.version>
 
         <!-- Optional APIs -->
-        <jakarta.enterprise.deploy-api.version>1.7.2</jakarta.enterprise.deploy-api.version>
-        <jakarta.xml.registry-api.version>1.0.10</jakarta.xml.registry-api.version>
-        <jakarta.xml.rpc-api.version>1.1.4</jakarta.xml.rpc-api.version>
+        <jakarta.xml.bind-api.version>3.0.0-RC1</jakarta.xml.bind-api.version>
+        <jakarta.xml.ws-api.version>3.0.0-RC1</jakarta.xml.ws-api.version>
+        <jakarta.xml.soap-api.version>2.0.0-RC1</jakarta.xml.soap-api.version>
+        <jakarta.jws-api.version>3.0.0-rc1</jakarta.jws-api.version>
 
         <!-- Other dependencies -->
-        <mojarra.version>2.3.9</mojarra.version>
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
-        <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
-        <jakarta.xml.ws-api.version>2.3.2</jakarta.xml.ws-api.version>
+        <mojarra.version>3.0.0-RC1</mojarra.version>
     </properties>
 
 
@@ -221,8 +220,8 @@
                             <configuration>
                                 <attachSources>true</attachSources>
                                 <excludeArtifactIds>tools-jar,servlet-api,jakarta.faces</excludeArtifactIds>
-                                <excludes>javax/help/**,${extra.excludes}</excludes>
-                                <includes>javax/**, resources/**</includes>
+                                <excludes>${extra.excludes}</excludes>
+                                <includes>jakarta/**, resources/**</includes>
                                 <excludeTransitive>true</excludeTransitive>
                             </configuration>
                         </execution>
@@ -262,14 +261,10 @@
                         <windowtitle>${project.name}</windowtitle>
                         <bottom>
 <![CDATA[
-<p align="left">Copyright &#169; 2019 Eclipse Foundation.<br>Use is subject to
+<p align="left">Copyright &#169; 2019-2020 Eclipse Foundation.<br>Use is subject to
 <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
 
                         </bottom>
-                        <links>
-                            <link>http://docs.oracle.com/javase/8/docs/api/</link>
-                            <link>http://docs.oracle.com/javaee/7/api/</link>
-                        </links>
                         <tags>
                             <tag>
                                 <name>implSpec</name>
