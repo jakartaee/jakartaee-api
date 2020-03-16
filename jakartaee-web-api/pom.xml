@@ -29,8 +29,8 @@
     <description>Jakarta EE Web Profile Specification APIs</description>
 
     <properties>
-        <!-- we don't process the rpc classes inlined in ejb-api nor Jakarta XML Binding compile time dependency -->
-        <extra.excludes>jakarta/xml/rpc/**,jakarta/xml/bind/**</extra.excludes>
+        <!-- we don't process the Jakarta XML Binding compile time dependency -->
+        <extra.excludes>jakarta/xml/bind/**</extra.excludes>
     </properties>
 
     <build>
