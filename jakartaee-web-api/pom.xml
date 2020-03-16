@@ -72,9 +72,6 @@
                         <goals>
                             <goal>jar-no-fork</goal>
                         </goals>
-                        <configuration>
-                            <attach>true</attach>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
