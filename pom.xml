@@ -201,7 +201,7 @@
                     <artifactId>maven-source-plugin</artifactId>
                     <version>2.1</version>
                     <configuration>
-                        <attach>false</attach>
+                        <attach>true</attach>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -255,7 +255,7 @@
                     <configuration>
                         <failOnError>false</failOnError>
                         <additionalparam>${javadoc.options}</additionalparam>
-                        <attach>false</attach>
+                        <attach>true</attach>
                         <doclint>none</doclint>
                         <doctitle>${project.name}</doctitle>
                         <windowtitle>${project.name}</windowtitle>
