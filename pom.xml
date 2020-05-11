@@ -234,7 +234,7 @@
                     <executions>
                         <execution>
                             <id>unpack-sources</id>
-                            <phase>process-resources</phase>
+                            <phase>process-sources</phase>
                             <configuration>
                                 <attachSources>true</attachSources>
                                 <excludeArtifactIds>tools-jar,servlet-api,jakarta.faces</excludeArtifactIds>
