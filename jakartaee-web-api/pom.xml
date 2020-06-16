@@ -28,11 +28,6 @@
     <name>Jakarta EE Web Profile API</name>
     <description>Jakarta EE Web Profile API</description>
 
-    <properties>
-        <!-- we don't process the Jakarta XML Binding compile time dependency -->
-        <extra.excludes>jakarta/xml/bind/**</extra.excludes>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -200,13 +195,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Compile-time dependencies -->
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>${jakarta.xml.bind-api.version}</version>
-            <optional>true</optional>
-        </dependency>
         <!-- work around for GLASSFISH-19861  -->
         <dependency>
             <groupId>org.glassfish</groupId>
