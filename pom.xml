@@ -275,13 +275,13 @@
                         <additionalparam>${javadoc.options}</additionalparam>
                         <attach>true</attach>
                         <doclint>none</doclint>
-                        <doctitle>${project.name}, ${project.version}</doctitle>
-                        <windowtitle>${project.name}, ${project.version}</windowtitle>
+                        <doctitle>${project.name}</doctitle>
+                        <windowtitle>${project.name}</windowtitle>
+                        <header><![CDATA[<br>${project.name} v${project.version}]]></header>
                         <bottom>
 <![CDATA[
 <p align="left">Copyright &#169; 2018,2020 Eclipse Foundation.<br>Use is subject to
 <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
-
                         </bottom>
                         <tags>
                             <tag>
