@@ -58,7 +58,7 @@
         <jakarta.validation-api.version>3.0.0-M1</jakarta.validation-api.version>
         <jakarta.interceptor-api.version>2.0.0-RC2</jakarta.interceptor-api.version>
         <jakarta.enterprise.cdi-api.version>3.0.0-M4</jakarta.enterprise.cdi-api.version>
-        <jakarta.inject.version>2.0.0-RC4</jakarta.inject.version>
+        <jakarta.inject.version>2.0.0</jakarta.inject.version>
         <jakarta.security.auth.message-api.version>2.0.0-RC1</jakarta.security.auth.message-api.version>
         <jakarta.security.enterprise-api.version>2.0.0-RC2</jakarta.security.enterprise-api.version>
         <jakarta.ws.rs-api.version>3.0.0-M1</jakarta.ws.rs-api.version>
