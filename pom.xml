@@ -70,7 +70,7 @@
         <jakarta.resource-api.version>2.0.0-RC2</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.0.0-RC1</jakarta.authorization-api.version>
         <jakarta.enterprise.concurrent-api.version>2.0.0-RC2</jakarta.enterprise.concurrent-api.version>
-        <jakarta.batch-api.version>2.0.0-M3</jakarta.batch-api.version>
+        <jakarta.batch-api.version>2.0.0</jakarta.batch-api.version>
 
         <!-- Optional APIs -->
         <jakarta.xml.bind-api.version>3.0.0-RC3</jakarta.xml.bind-api.version>
