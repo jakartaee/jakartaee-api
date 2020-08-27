@@ -49,7 +49,7 @@
         <jakarta.faces-api.version>3.0.0-RC1</jakarta.faces-api.version>
         <jakarta.el-api.version>4.0.0-RC2</jakarta.el-api.version>
         <jakarta.websocket-api.version>2.0.0-RC1</jakarta.websocket-api.version>
-        <jakarta.json-api.version>2.0.0-RC2</jakarta.json-api.version>
+        <jakarta.json-api.version>2.0.0</jakarta.json-api.version>
         <jakarta.json.bind-api.version>2.0.0-RC1</jakarta.json.bind-api.version>
         <jakarta.annotation-api.version>2.0.0-RC1</jakarta.annotation-api.version>
         <jakarta.ejb-api.version>4.0.0-RC2</jakarta.ejb-api.version>
