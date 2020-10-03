@@ -46,7 +46,7 @@
         <jakarta.servlet-api.version>5.0.0-M1</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>3.0.0-RC2</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>2.0.0-RC1</jakarta.servlet.jsp.jstl-api.version>
-        <jakarta.faces-api.version>3.0.0-RC1</jakarta.faces-api.version>
+        <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
         <jakarta.el-api.version>4.0.0</jakarta.el-api.version>
         <jakarta.websocket-api.version>2.0.0-RC1</jakarta.websocket-api.version>
         <jakarta.json-api.version>2.0.0</jakarta.json-api.version>
