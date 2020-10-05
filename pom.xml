@@ -74,9 +74,9 @@
 
         <!-- Optional APIs -->
         <jakarta.xml.bind-api.version>3.0.0</jakarta.xml.bind-api.version>
-        <jakarta.xml.ws-api.version>3.0.0-RC3</jakarta.xml.ws-api.version>
+        <jakarta.xml.ws-api.version>3.0.0</jakarta.xml.ws-api.version>
         <jakarta.xml.soap-api.version>2.0.0</jakarta.xml.soap-api.version>
-        <jakarta.jws-api.version>3.0.0-RC2</jakarta.jws-api.version>
+        <jakarta.jws-api.version>3.0.0</jakarta.jws-api.version>
 
         <!-- Other dependencies -->
         <copyright-plugin.version>1.50</copyright-plugin.version>
