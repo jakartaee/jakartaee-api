@@ -44,8 +44,8 @@
 
         <!-- Web Profile -->
         <jakarta.servlet-api.version>5.0.0</jakarta.servlet-api.version>
-        <jakarta.servlet.jsp-api.version>3.0.0-RC2</jakarta.servlet.jsp-api.version>
-        <jakarta.servlet.jsp.jstl-api.version>2.0.0-RC1</jakarta.servlet.jsp.jstl-api.version>
+        <jakarta.servlet.jsp-api.version>3.0.0</jakarta.servlet.jsp-api.version>
+        <jakarta.servlet.jsp.jstl-api.version>2.0.0</jakarta.servlet.jsp.jstl-api.version>
         <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
         <jakarta.el-api.version>4.0.0</jakarta.el-api.version>
         <jakarta.websocket-api.version>2.0.0</jakarta.websocket-api.version>
@@ -56,15 +56,15 @@
         <jakarta.transaction-api.version>2.0.0</jakarta.transaction-api.version>
         <jakarta.persistence-api.version>3.0.0</jakarta.persistence-api.version>
         <jakarta.validation-api.version>3.0.0</jakarta.validation-api.version>
-        <jakarta.interceptor-api.version>2.0.0-RC2</jakarta.interceptor-api.version>
+        <jakarta.interceptor-api.version>2.0.0</jakarta.interceptor-api.version>
         <jakarta.enterprise.cdi-api.version>3.0.0</jakarta.enterprise.cdi-api.version>
         <jakarta.inject.version>2.0.0</jakarta.inject.version>
-        <jakarta.security.auth.message-api.version>2.0.0-RC1</jakarta.security.auth.message-api.version>
-        <jakarta.security.enterprise-api.version>2.0.0-RC2</jakarta.security.enterprise-api.version>
-        <jakarta.ws.rs-api.version>3.0.0-M1</jakarta.ws.rs-api.version>
+        <jakarta.authentication-api.version>2.0.0</jakarta.authentication-api.version>
+        <jakarta.security.enterprise-api.version>2.0.0</jakarta.security.enterprise-api.version>
+        <jakarta.ws.rs-api.version>3.0.0</jakarta.ws.rs-api.version>
 
         <!--  Full platform -->
-        <jakarta.jms-api.version>3.0.0-RC1</jakarta.jms-api.version>
+        <jakarta.jms-api.version>3.0.0</jakarta.jms-api.version>
         <jakarta.activation-api.version>2.0.0</jakarta.activation-api.version>
         <jakarta.mail-api.version>2.0.0</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.0.0</jakarta.resource-api.version>
@@ -82,7 +82,7 @@
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
-        <mojarra.version>3.0.0-RC2</mojarra.version>
+        <mojarra.version>3.0.0</mojarra.version>
     </properties>
 
 
