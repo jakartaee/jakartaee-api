@@ -277,6 +277,7 @@
                         <doclint>none</doclint>
                         <doctitle>${project.name}</doctitle>
                         <windowtitle>${project.name}</windowtitle>
+                        <javadocDirectory>${project.basedir}</javadocDirectory>
                         <header><![CDATA[<br>${project.name} v${project.version}]]></header>
                         <bottom>
 <![CDATA[
