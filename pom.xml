@@ -126,21 +126,6 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>copy-doc-files</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${project.basedir}/../doc-files</directory>
-                                </resource>
-                            </resources>
-                            <outputDirectory>${project.build.directory}/site/apidocs/doc-files</outputDirectory>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>copy-javadoc-resources</id>
                         <phase>process-resources</phase>
                         <goals>
@@ -273,6 +258,8 @@
                     <configuration>
                         <failOnError>false</failOnError>
                         <additionalparam>${javadoc.options}</additionalparam>
+                        <docfilessubdirs>true</docfilessubdirs>
+                        <javadocDirectory>${project.basedir}/../src/main/javadoc</javadocDirectory>
                         <attach>true</attach>
                         <doclint>none</doclint>
                         <doctitle>${project.name}</doctitle>

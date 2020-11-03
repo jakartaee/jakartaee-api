@@ -9,7 +9,7 @@ property in the top level pom.xml file.
 
 To add or remove an API, all pom.xml files will need to be updated.
 
-The file doc-files/speclicense.html should have the content of
+The file src/main/javadoc/doc-files/speclicense.html should have the content of
 licenses/EPL.html for non-final releases, and should have the
 content of licenses/EFSL.html for final releases.
 
@@ -28,7 +28,9 @@ Use the staging profile if necessary to pull in staged versions of artifacts.
 
 Run the full build:
 
-`mvn -Pstaging install javadoc:javadoc`
+- mvn -Pstaging install javadoc:javadoc 
+`or`
+- mvn -Pstaging install javadoc:jar
 
 Locate the API jar files:
 - jakartaee-api/target/jakartaee-api-{version}.jar
@@ -37,6 +39,10 @@ Locate the API jar files:
 Locate the javadocs:
 - jakartaee-api/target/site/apidocs
 - jakartaee-web-api/target/site/apidocs
+`or`
+- jakartaee-api/target/jakartaee-api-{version}-javadoc.jar
+- jakartaee-web-api/target/jakartaee-web-api-{version}-javadoc.jar
+
 
 Locate the Bill Of Materials (BOM) file:
 - jakartaee-bom/target/pom.xml
