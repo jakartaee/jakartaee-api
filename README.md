@@ -9,9 +9,10 @@ property in the top level pom.xml file.
 
 To add or remove an API, all pom.xml files will need to be updated.
 
-The file src/main/javadoc/doc-files/speclicense.html should have the content of
-licenses/EPL.html for non-final releases, and should have the
-content of licenses/EFSL.html for final releases.
+The file `src/main/javadoc/doc-files/speclicense.html` should have the content of
+`EPL.html` for non-final releases, and should have the
+content of `EFSL.html` for final releases.
+Currently, this selection is controlled by the [Jenkins release build script](https://ci.eclipse.org/jakartaee-platform/job/release/).
 
 Note that the glassfishbuild-maven-plugin is used to create "clean"
 pom.xml files to be published for each of the projects.
