@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 1997, 2020 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 1997, 2021 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -65,7 +65,7 @@
 
         <!--  Full platform -->
         <jakarta.jms-api.version>3.0.0</jakarta.jms-api.version>
-        <jakarta.activation-api.version>2.0.0</jakarta.activation-api.version>
+        <jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>
         <jakarta.mail-api.version>2.0.0</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.0.0</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.0.0</jakarta.authorization-api.version>
@@ -73,9 +73,9 @@
         <jakarta.batch-api.version>2.0.0</jakarta.batch-api.version>
 
         <!-- Optional APIs -->
-        <jakarta.xml.bind-api.version>3.0.0</jakarta.xml.bind-api.version>
-        <jakarta.xml.ws-api.version>3.0.0</jakarta.xml.ws-api.version>
-        <jakarta.xml.soap-api.version>2.0.0</jakarta.xml.soap-api.version>
+        <jakarta.xml.bind-api.version>3.0.1</jakarta.xml.bind-api.version>
+        <jakarta.xml.ws-api.version>3.0.1</jakarta.xml.ws-api.version>
+        <jakarta.xml.soap-api.version>2.0.1</jakarta.xml.soap-api.version>
         <jakarta.jws-api.version>3.0.0</jakarta.jws-api.version>
 
         <!-- Other dependencies -->
