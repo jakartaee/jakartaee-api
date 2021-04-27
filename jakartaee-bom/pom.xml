@@ -200,6 +200,11 @@
                 <version>${jakarta.enterprise.deploy-api.version}</version>
             </dependency>
             <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>${jakarta.xml.bind-api.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>jakarta.xml.registry</groupId>
                 <artifactId>jakarta.xml.registry-api</artifactId>
                 <version>${jakarta.xml.registry-api.version}</version>
