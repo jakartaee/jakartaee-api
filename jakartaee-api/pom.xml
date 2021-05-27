@@ -71,6 +71,15 @@
     </build>
 
     <dependencies>
+    
+        <!-- Core Profile API  -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-core-api</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
+
         <!-- Web Profile API  -->
         <dependency>
             <groupId>jakarta.platform</groupId>
