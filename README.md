@@ -22,7 +22,7 @@ Building
 
 Prerequisites:
 
-* JDK8+
+* JDK11+ (Jakarta EE 10 and above)
 * Maven 3.0.3+
 
 Use the staging profile if necessary to pull in staged versions of artifacts.
