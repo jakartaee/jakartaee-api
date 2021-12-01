@@ -41,32 +41,33 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakartaee.version>10.0.0</jakartaee.version>
         <extra.excludes />
+        <javadoc.options />
 
         <!-- Web Profile -->
-        <jakarta.servlet-api.version>5.0.0</jakarta.servlet-api.version>
-        <jakarta.servlet.jsp-api.version>3.0.0</jakarta.servlet.jsp-api.version>
+        <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
+        <jakarta.servlet.jsp-api.version>3.1.0</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>2.0.0</jakarta.servlet.jsp.jstl-api.version>
         <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
-        <jakarta.el-api.version>4.0.0</jakarta.el-api.version>
+        <jakarta.el-api.version>5.0.0</jakarta.el-api.version>
         <jakarta.websocket-api.version>2.0.0</jakarta.websocket-api.version>
-        <jakarta.json-api.version>2.0.1</jakarta.json-api.version>
+        <jakarta.json-api.version>2.1.0</jakarta.json-api.version>
         <jakarta.json.bind-api.version>2.0.0</jakarta.json.bind-api.version>
         <jakarta.annotation-api.version>2.0.0</jakarta.annotation-api.version>
         <jakarta.ejb-api.version>4.0.0</jakarta.ejb-api.version>
         <jakarta.transaction-api.version>2.0.0</jakarta.transaction-api.version>
         <jakarta.persistence-api.version>3.0.0</jakarta.persistence-api.version>
-        <jakarta.validation-api.version>3.0.0</jakarta.validation-api.version>
+        <jakarta.validation-api.version>3.0.1</jakarta.validation-api.version>
         <jakarta.interceptor-api.version>2.0.0</jakarta.interceptor-api.version>
         <jakarta.enterprise.cdi-api.version>3.0.0</jakarta.enterprise.cdi-api.version>
-        <jakarta.inject.version>2.0.0</jakarta.inject.version>
+        <jakarta.inject.version>2.0.1</jakarta.inject.version>
         <jakarta.authentication-api.version>2.0.0</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>2.0.0</jakarta.security.enterprise-api.version>
-        <jakarta.ws.rs-api.version>3.0.0</jakarta.ws.rs-api.version>
+        <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
 
         <!--  Full platform -->
         <jakarta.jms-api.version>3.0.0</jakarta.jms-api.version>
-        <jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>
-        <jakarta.mail-api.version>2.0.1</jakarta.mail-api.version>
+        <jakarta.activation-api.version>2.1.0</jakarta.activation-api.version>
+        <jakarta.mail-api.version>2.1.0</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.0.0</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.0.0</jakarta.authorization-api.version>
         <jakarta.enterprise.concurrent-api.version>2.0.0</jakarta.enterprise.concurrent-api.version>
@@ -254,7 +255,7 @@
                     <version>3.1.0</version>
                     <configuration>
                         <failOnError>false</failOnError>
-                        <additionalparam>${javadoc.options}</additionalparam>
+                        <additionalJOptions>${javadoc.options}</additionalJOptions>
                         <docfilessubdirs>true</docfilessubdirs>
                         <javadocDirectory>${project.basedir}/../src/main/javadoc</javadocDirectory>
                         <attach>true</attach>

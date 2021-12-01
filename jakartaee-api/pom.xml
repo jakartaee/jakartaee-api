@@ -165,18 +165,6 @@
             <version>${mojarra.version}</version>
             <optional>true</optional>
         </dependency>
-        <!--
-            Using com.sun.mail:jakarta.mail instead of
-            jakarta.mail:jakarta.mail-api because jakarta.mail has a
-            dependency on com.sun.mail classes, but the pom does
-            not bring in the dependency.
-        -->
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>jakarta.mail</artifactId>
-            <version>${jakarta.mail-api.version}</version>
-            <optional>true</optional>
-        </dependency>
 
 
     </dependencies>
