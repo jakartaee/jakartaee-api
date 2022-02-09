@@ -143,19 +143,18 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>jakarta.jws</groupId>
-            <artifactId>jakarta.jws-api</artifactId>
-            <version>${jakarta.jws-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>jakarta.xml.soap</groupId>
             <artifactId>jakarta.xml.soap-api</artifactId>
             <version>${jakarta.xml.soap-api.version}</version>
             <optional>true</optional>
         </dependency>
 
-
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.lang-model</artifactId>
+            <version>${jakarta.enterprise.cdi-api.version}</version>
+            <optional>true</optional>
+        </dependency>
 
         <!-- Compile-time dependencies -->
         <!-- work around for GLASSFISH-19861  -->
