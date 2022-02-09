@@ -114,6 +114,11 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>jakarta.websocket</groupId>
+            <artifactId>jakarta.websocket-client-api</artifactId>
+            <version>${jakarta.websocket-api.version}</version>
+        </dependency>
+        <dependency>
             <groupId>jakarta.json</groupId>
             <artifactId>jakarta.json-api</artifactId>
             <version>${jakarta.json-api.version}</version>
@@ -189,6 +194,12 @@
             <groupId>jakarta.security.enterprise</groupId>
             <artifactId>jakarta.security.enterprise-api</artifactId>
             <version>${jakarta.security.enterprise-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>${jakarta.xml.bind-api.version}</version>
             <optional>true</optional>
         </dependency>
 

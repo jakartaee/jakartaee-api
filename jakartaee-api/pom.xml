@@ -143,19 +143,18 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>jakarta.jws</groupId>
-            <artifactId>jakarta.jws-api</artifactId>
-            <version>${jakarta.jws-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>jakarta.xml.soap</groupId>
             <artifactId>jakarta.xml.soap-api</artifactId>
             <version>${jakarta.xml.soap-api.version}</version>
             <optional>true</optional>
         </dependency>
 
-
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.lang-model</artifactId>
+            <version>${jakarta.enterprise.cdi-api.version}</version>
+            <optional>true</optional>
+        </dependency>
 
         <!-- Compile-time dependencies -->
         <!-- work around for GLASSFISH-19861  -->
@@ -163,18 +162,6 @@
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.faces</artifactId>
             <version>${mojarra.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <!--
-            Using com.sun.mail:jakarta.mail instead of
-            jakarta.mail:jakarta.mail-api because jakarta.mail has a
-            dependency on com.sun.mail classes, but the pom does
-            not bring in the dependency.
-        -->
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>jakarta.mail</artifactId>
-            <version>${jakarta.mail-api.version}</version>
             <optional>true</optional>
         </dependency>
 
