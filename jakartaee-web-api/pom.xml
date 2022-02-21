@@ -202,6 +202,12 @@
             <version>${jakarta.xml.bind-api.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>jakarta.enterprise.concurrent</groupId>
+            <artifactId>jakarta.enterprise.concurrent-api</artifactId>
+            <version>${jakarta.enterprise.concurrent-api.version}</version>
+            <optional>true</optional>
+        </dependency>
 
         <!-- work around for GLASSFISH-19861  -->
         <dependency>

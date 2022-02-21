@@ -63,14 +63,14 @@
         <jakarta.authentication-api.version>2.0.0</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>2.0.0</jakarta.security.enterprise-api.version>
         <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
-
+        <jakarta.enterprise.concurrent-api.version>3.0.0</jakarta.enterprise.concurrent-api.version>
+        
         <!--  Full platform -->
         <jakarta.jms-api.version>3.0.0</jakarta.jms-api.version>
         <jakarta.activation-api.version>2.1.0</jakarta.activation-api.version>
         <jakarta.mail-api.version>2.1.0</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.0.0</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.1.0-RC1</jakarta.authorization-api.version>
-        <jakarta.enterprise.concurrent-api.version>3.0.0</jakarta.enterprise.concurrent-api.version>
         <jakarta.batch-api.version>2.1.0-M1</jakarta.batch-api.version>
 
         <!-- Optional APIs -->
