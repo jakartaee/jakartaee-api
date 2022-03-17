@@ -36,13 +36,16 @@ Run the full build:
 
 Locate the API jar files:
 - jakartaee-api/target/jakartaee-api-{version}.jar
+- jakartaee-core-api/target/jakartaee-core-api-{version}.jar
 - jakartaee-web-api/target/jakartaee-web-api-{version}.jar
 
 Locate the javadocs:
-- jakartaee-api/target/site/apidocs
-- jakartaee-web-api/target/site/apidocs
+- jakartaee-api/target/apidocs
+- jakartaee-core-api/target/apidocs
+- jakartaee-web-api/target/apidocs
 `or`
 - jakartaee-api/target/jakartaee-api-{version}-javadoc.jar
+- jakartaee-web-api/target/jakartaee-core-api-{version}-javadoc.jar
 - jakartaee-web-api/target/jakartaee-web-api-{version}-javadoc.jar
 
 

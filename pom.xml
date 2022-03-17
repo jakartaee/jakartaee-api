@@ -33,6 +33,7 @@
 
     <modules>
         <module>jakartaee-bom</module>
+        <module>jakartaee-core-api</module>
         <module>jakartaee-web-api</module>
         <module>jakartaee-api</module>
     </modules>
@@ -42,6 +43,16 @@
         <jakartaee.version>10.0.0</jakartaee.version>
         <extra.excludes />
         <javadoc.options />
+
+        <!-- Core Profile -->
+        <jakarta.annotation-api.version>2.1.0</jakarta.annotation-api.version>
+        <jakarta.enterprise.cdi-api.version>4.0.0</jakarta.enterprise.cdi-api.version>
+        <jakarta.inject.version>2.0.1</jakarta.inject.version>
+        <jakarta.el-api.version>5.0.0</jakarta.el-api.version>
+        <jakarta.interceptor-api.version>2.1.0</jakarta.interceptor-api.version>
+        <jakarta.json-api.version>2.1.0</jakarta.json-api.version>
+        <jakarta.json.bind-api.version>3.0.0</jakarta.json.bind-api.version>
+        <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
 
         <!-- Web Profile -->
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
@@ -106,50 +117,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-resource-files</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.directory}/sources-dependency</directory>
-                                    <includes>
-                                        <include>**/*.properties</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-javadoc-resources</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.directory}/sources-dependency</directory>
-                                    <includes>
-                                        <include>**/*.jpg</include>
-                                        <include>**/*.gif</include>
-                                        <include>**/*.pdf</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <outputDirectory>${project.build.directory}/site/apidocs</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
@@ -252,10 +220,11 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.3.1</version>
                     <configuration>
                         <failOnError>false</failOnError>
                         <additionalJOptions>${javadoc.options}</additionalJOptions>
+                        <description>${project.description}</description>
                         <docfilessubdirs>true</docfilessubdirs>
                         <javadocDirectory>${project.basedir}/../src/main/javadoc</javadocDirectory>
                         <attach>true</attach>
@@ -265,10 +234,18 @@
                         <header><![CDATA[<br>${project.name} v${project.version}]]></header>
                         <bottom>
 <![CDATA[
-<p align="left">Copyright &#169; 2018,2020 Eclipse Foundation.<br>Use is subject to
+<p align="left">Copyright &#169; 2018,2022 Eclipse Foundation.<br>Use is subject to
 <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
                         </bottom>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
