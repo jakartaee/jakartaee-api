@@ -43,6 +43,17 @@
         <extra.excludes />
         <javadoc.options />
 
+        <!-- Core Profile -->
+        <!-- Theoretically these versions could be different from Web Profile -->
+        <jakarta.json-api.cp.version>2.1.0</jakarta.json-api.cp.version>
+        <jakarta.json.bind-api.cp.version>3.0.0</jakarta.json.bind-api.cp.version>
+        <jakarta.annotation-api.cp.version>2.1.0</jakarta.annotation-api.cp.version>
+        <jakarta.inject.cp.version>2.0.1</jakarta.inject.cp.version>
+        <jakarta.interceptor-api.cp.version>2.1.0</jakarta.interceptor-api.cp.version>
+        <jakarta.enterprise.cdi-api.cp.version>4.0.0</jakarta.enterprise.cdi-api.cp.version>
+        <jakarta.inject.cp.version>2.0.1</jakarta.inject.cp.version>
+        <jakarta.ws.rs-api.cp.version>3.1.0</jakarta.ws.rs-api.cp.version>
+
         <!-- Web Profile -->
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>3.1.0</jakarta.servlet.jsp-api.version>
@@ -54,7 +65,7 @@
         <jakarta.json.bind-api.version>3.0.0</jakarta.json.bind-api.version>
         <jakarta.annotation-api.version>2.1.0</jakarta.annotation-api.version>
         <jakarta.ejb-api.version>4.0.0</jakarta.ejb-api.version>
-        <jakarta.transaction-api.version>2.0.1-RC1</jakarta.transaction-api.version>
+        <jakarta.transaction-api.version>2.0.1</jakarta.transaction-api.version>
         <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
         <jakarta.validation-api.version>3.0.1</jakarta.validation-api.version>
         <jakarta.interceptor-api.version>2.1.0</jakarta.interceptor-api.version>
