@@ -33,6 +33,7 @@
 
     <modules>
         <module>jakartaee-bom</module>
+        <module>jakartaee-core-api</module>
         <module>jakartaee-web-api</module>
         <module>jakartaee-api</module>
     </modules>
