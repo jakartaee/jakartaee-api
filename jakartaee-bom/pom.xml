@@ -173,11 +173,6 @@
                 <version>${jakarta.mail-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>jakarta.mail</artifactId>
-                <version>${jakarta.mail-api.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>jakarta.resource</groupId>
                 <artifactId>jakarta.resource-api</artifactId>
                 <version>${jakarta.resource-api.version}</version>
