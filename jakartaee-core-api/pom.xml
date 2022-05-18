@@ -123,11 +123,20 @@
             <version>${jakarta.inject.cp.version}</version>
             <optional>true</optional>
         </dependency>
+
         <!-- Only needed to compile the RESTful Link class as it uses XML Binding -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
             <version>${jakarta.xml.bind-api.version}</version>
+            <optional>true</optional>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Only needed to compile the BeanManager non-Lite usage of EL -->
+        <dependency>
+            <groupId>jakarta.el</groupId>
+            <artifactId>jakarta.el-api</artifactId>
+            <version>${jakarta.el-api.version}</version>
             <optional>true</optional>
             <scope>provided</scope>
         </dependency>
