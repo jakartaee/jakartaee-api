@@ -75,42 +75,46 @@
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>${jakarta.ws.rs-api.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.json</groupId>
             <artifactId>jakarta.json-api</artifactId>
             <version>${jakarta.json-api.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.json.bind</groupId>
             <artifactId>jakarta.json.bind-api</artifactId>
             <version>${jakarta.json.bind-api.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
             <version>${jakarta.annotation-api.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.interceptor</groupId>
             <artifactId>jakarta.interceptor-api</artifactId>
             <version>${jakarta.interceptor-api.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.enterprise</groupId>
             <artifactId>jakarta.enterprise.cdi-api</artifactId>
             <version>${jakarta.enterprise.cdi-api.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
             <exclusions>
-              <exclusion>
-                  <groupId>jakarta.inject</groupId>
-                  <artifactId>jakarta.inject-api</artifactId>
-              </exclusion>
+                <exclusion>
+                    <groupId>jakarta.inject</groupId>
+                    <artifactId>jakarta.inject-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>jakarta.enterprise</groupId>
+                    <artifactId>jakarta.enterprise.lang-model</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>jakarta.el</groupId>
                     <artifactId>jakarta.el-api</artifactId>
@@ -121,7 +125,13 @@
             <groupId>jakarta.inject</groupId>
             <artifactId>jakarta.inject-api</artifactId>
             <version>${jakarta.inject.cp.version}</version>
-            <optional>true</optional>
+            <optional>false</optional>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.lang-model</artifactId>
+            <version>${jakarta.enterprise.cdi-api.cp.version}</version>
+            <optional>false</optional>
         </dependency>
 
         <!-- Only needed to compile the RESTful Link class as it uses XML Binding -->
