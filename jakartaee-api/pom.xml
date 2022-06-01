@@ -97,12 +97,24 @@
             <artifactId>jakarta.mail-api</artifactId>
             <version>${jakarta.mail-api.version}</version>
             <optional>false</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>jakarta.resource</groupId>
             <artifactId>jakarta.resource-api</artifactId>
             <version>${jakarta.resource-api.version}</version>
             <optional>false</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>jakarta.authorization</groupId>
@@ -111,8 +123,8 @@
             <optional>false</optional>
             <exclusions>
                 <exclusion>
-                    <groupId>jakarta.servlet</groupId>
-                    <artifactId>jakarta.servlet-api</artifactId>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -121,6 +133,12 @@
             <artifactId>jakarta.batch-api</artifactId>
             <version>${jakarta.batch-api.version}</version>
             <optional>false</optional>
+             <exclusions>
+                 <exclusion>
+                     <groupId>*</groupId>
+                     <artifactId>*</artifactId>
+                 </exclusion>
+             </exclusions>
         </dependency>
 
         <!-- Optional APIs -->
@@ -129,18 +147,36 @@
             <artifactId>jakarta.xml.bind-api</artifactId>
             <version>${jakarta.xml.bind-api.version}</version>
             <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>jakarta.xml.ws</groupId>
             <artifactId>jakarta.xml.ws-api</artifactId>
             <version>${jakarta.xml.ws-api.version}</version>
             <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>jakarta.xml.soap</groupId>
             <artifactId>jakarta.xml.soap-api</artifactId>
             <version>${jakarta.xml.soap-api.version}</version>
             <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Compile-time dependencies -->
@@ -150,6 +186,13 @@
             <artifactId>jakarta.faces</artifactId>
             <version>${mojarra.version}</version>
             <optional>true</optional>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
 
