@@ -83,7 +83,7 @@
         <jakarta.mail-api.version>2.1.0</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.1.0</jakarta.resource-api.version>
         <jakarta.authorization-api.version>2.1.0</jakarta.authorization-api.version>
-        <jakarta.batch-api.version>2.1.0</jakarta.batch-api.version>
+        <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
 
         <!-- Optional APIs -->
         <jakarta.xml.bind-api.version>4.0.0</jakarta.xml.bind-api.version>
