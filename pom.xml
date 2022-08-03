@@ -52,7 +52,6 @@
         <jakarta.inject.cp.version>2.0.1</jakarta.inject.cp.version>
         <jakarta.interceptor-api.cp.version>2.1.0</jakarta.interceptor-api.cp.version>
         <jakarta.enterprise.cdi-api.cp.version>4.0.1</jakarta.enterprise.cdi-api.cp.version>
-        <jakarta.inject.cp.version>2.0.1</jakarta.inject.cp.version>
         <jakarta.ws.rs-api.cp.version>3.1.0</jakarta.ws.rs-api.cp.version>
 
         <!-- Web Profile -->
