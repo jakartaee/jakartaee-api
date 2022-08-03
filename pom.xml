@@ -75,7 +75,7 @@
         <jakarta.authentication-api.version>3.0.0</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>3.0.0</jakarta.security.enterprise-api.version>
         <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
-        <jakarta.enterprise.concurrent-api.version>3.0.0</jakarta.enterprise.concurrent-api.version>
+        <jakarta.enterprise.concurrent-api.version>3.0.1</jakarta.enterprise.concurrent-api.version>
         
         <!--  Full platform -->
         <jakarta.jms-api.version>3.1.0</jakarta.jms-api.version>
