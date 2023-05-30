@@ -122,24 +122,6 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>copy-resource-files</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.directory}/sources-dependency</directory>
-                                    <includes>
-                                        <include>**/*.properties</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>copy-javadoc-resources</id>
                         <phase>process-resources</phase>
                         <goals>
@@ -230,7 +212,7 @@
                             <id>unpack-sources</id>
                             <phase>process-sources</phase>
                             <configuration>
-                                <attachSources>true</attachSources>
+                                <attachSources>false</attachSources>
                                 <excludeArtifactIds>tools-jar,servlet-api,jakarta.faces</excludeArtifactIds>
                                 <excludes>${extra.excludes}</excludes>
                                 <includes>jakarta/**, resources/**</includes>
@@ -276,9 +258,10 @@
                         <header><![CDATA[<br>${project.name} v${project.version}]]></header>
                         <bottom>
 <![CDATA[
-<p align="left">Copyright &#169; 2018,2022 Eclipse Foundation.<br>Use is subject to
+<p align="left">Copyright &#169; 2018,2023 Eclipse Foundation.<br>Use is subject to
 <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
                         </bottom>
+                        <sourcepath>${project.build.directory}/sources-dependency</sourcepath>
                     </configuration>
                 </plugin>
             </plugins>
