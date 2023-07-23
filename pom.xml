@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 1997, 2022 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -43,6 +43,21 @@
         <jakartaee.version>10.0.0</jakartaee.version>
         <extra.excludes />
         <javadoc.options />
+
+        <apidocs.api.src>${project.build.directory}/api-sources</apidocs.api.src>
+        <apidocs.api.tmp>${project.build.directory}/api-sources-tmp</apidocs.api.tmp>
+        <apidocs.api.dist>${project.build.directory}/api-javadoc</apidocs.api.dist>
+        <apidocs.modulepath/>
+        <apidocs.required>*</apidocs.required>
+        <apidocs.optional/>
+
+        <apidocs.windowtitle>${project.name}</apidocs.windowtitle>
+        <apidocs.doctitle>${project.name}</apidocs.doctitle>
+        <apidocs.header><![CDATA[<br>${project.name} v${project.version}]]></apidocs.header>
+        <apidocs.bottom><![CDATA[
+<p align="left">Copyright &#169; 2018,2023 Eclipse Foundation.<br>Use is subject to
+<a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]></apidocs.bottom>
+
 
         <!-- Core Profile -->
         <!-- Theoretically these versions could be different from Web Profile -->
@@ -93,7 +108,7 @@
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
-        <mojarra.version>4.0.0</mojarra.version>
+        <mojarra.version>4.0.1</mojarra.version>
         
         <!-- Java compiler release (replaces source and target)-->
         <maven.compiler.release>11</maven.compiler.release>
@@ -245,7 +260,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.5.0</version>
                     <configuration>
                         <failOnError>false</failOnError>
                         <additionalJOptions>${javadoc.options}</additionalJOptions>
@@ -253,16 +268,223 @@
                         <javadocDirectory>${project.basedir}/../src/main/javadoc</javadocDirectory>
                         <attach>true</attach>
                         <doclint>none</doclint>
-                        <doctitle>${project.name}</doctitle>
-                        <windowtitle>${project.name}</windowtitle>
-                        <header><![CDATA[<br>${project.name} v${project.version}]]></header>
-                        <bottom>
-<![CDATA[
-<p align="left">Copyright &#169; 2018,2023 Eclipse Foundation.<br>Use is subject to
-<a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
-                        </bottom>
+                        <doctitle>${apidocs.doctitle}</doctitle>
+                        <windowtitle>${apidocs.windowtitle}</windowtitle>
+                        <header>${apidocs.header}</header>
+                        <bottom>${apidocs.bottom}</bottom>
                         <sourcepath>${project.build.directory}/sources-dependency</sourcepath>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.6.0</version>
+                    <executions>
+                        <execution>
+                            <id>unpack-sources</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>unpack-dependencies</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${apidocs.api.tmp}</outputDirectory>
+                                <classifier>sources</classifier>
+                                <useSubDirectoryPerArtifact>true</useSubDirectoryPerArtifact>
+                                <stripVersion>true</stripVersion>
+                                <excludeScope>provided</excludeScope>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.ant</groupId>
+                            <artifactId>ant</artifactId>
+                            <version>1.10.12</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>prepare-sources</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <target>
+                                    <mkdir dir="${apidocs.api.src}"/>
+                                    <copy todir="${apidocs.api.src}" >
+                                        <fileset dir="${apidocs.api.tmp}">
+                                            <include name="*-api-sources-jar/**"/>
+                                            <exclude name="jakarta.enterprise.cdi-api-sources-jar/**"/>
+                                            <!-- web-profile -->
+                                            <exclude name="jakarta.authentication-api-sources-jar/**"/>
+                                            <exclude name="jakarta.enterprise.concurrent-api-sources-jar/**"/>
+                                            <exclude name="jakarta.security.enterprise-api-sources-jar/**"/>
+                                            <exclude name="jakarta.websocket-client-api-sources-jar/**"/>
+                                            <!-- full -->
+                                            <exclude name="jakarta.authorization-api-sources-jar/**"/>
+                                            <exclude name="jakarta.jms-api-sources-jar/**"/>
+                                        </fileset>
+                                        <mapper type="regexp" from="^(.*)-api-sources-jar(.*)$$" to="\1\2"/>
+                                    </copy>
+
+                                    <copy todir="${apidocs.api.src}/jakarta.cdi" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.enterprise.cdi-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                    <copy todir="${apidocs.api.src}/jakarta.cdi.lang.model" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.enterprise.lang-model-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                </target>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>prepare-sources-web</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <target>
+                                    <copy todir="${apidocs.api.src}/jakarta.security.auth.message" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.authentication-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                    <copy todir="${apidocs.api.src}/jakarta.concurrency" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.enterprise.concurrent-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                    <copy todir="${apidocs.api.src}/jakarta.security" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.security.enterprise-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                    <copy todir="${apidocs.api.src}/jakarta.websocket.client" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.websocket-client-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+
+                                    <echo file="${apidocs.api.src}/jakarta.faces/module-info.java">
+module jakarta.faces {
+    exports jakarta.faces;
+    exports jakarta.faces.annotation;
+    exports jakarta.faces.application;
+    exports jakarta.faces.component;
+    exports jakarta.faces.component.behavior;
+    exports jakarta.faces.component.html;
+    exports jakarta.faces.component.search;
+    exports jakarta.faces.component.visit;
+    exports jakarta.faces.context;
+    exports jakarta.faces.convert;
+    exports jakarta.faces.el;
+    exports jakarta.faces.event;
+    exports jakarta.faces.flow;
+    exports jakarta.faces.flow.builder;
+    exports jakarta.faces.lifecycle;
+    exports jakarta.faces.model;
+    exports jakarta.faces.push;
+    exports jakarta.faces.render;
+    exports jakarta.faces.validator;
+    exports jakarta.faces.view;
+    exports jakarta.faces.view.facelets;
+    exports jakarta.faces.webapp;
+
+    requires java.logging;
+    requires jakarta.el;
+    requires jakarta.cdi;
+    requires jakarta.servlet;
+    requires jakarta.validation;
+    requires jakarta.websocket;
+    requires jakarta.websocket.client;
+    requires java.desktop;
+    requires java.sql;
+    requires java.naming;
+    requires jakarta.inject;
+    requires jakarta.persistence;
+    requires jakarta.ejb;
+    requires jakarta.json;
+    requires jakarta.xml.ws;
+}
+                                    </echo>
+                                </target>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>prepare-sources-platform</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <target>
+                                    <copy todir="${apidocs.api.src}/jakarta.security.jacc" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.authorization-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+
+                                    <copy todir="${apidocs.api.src}/jakarta.messaging" >
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.jms-api-sources-jar">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                </target>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>build-javadocs</id>
+                            <phase>none</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <target>
+                                    <mkdir dir="${apidocs.api.dist}"/>
+                                    <javadoc destdir="${apidocs.api.dist}"
+                                             modulesourcepath="${apidocs.api.src}"
+                                             modulepath="${apidocs.modulepath}"
+                                             author="false"
+                                             docfilessubdirs="true"
+                                             failonerror="true"
+                                             serialwarn="true"
+                                             source="${maven.compiler.release}"
+                                             splitindex="true"
+                                             use="true"
+                                             windowtitle="${apidocs.windowtitle}"
+                                    >
+                                        <arg value="-J-Xmx256m"/>
+                                        <arg value="-Xdoclint:none"/>
+                                        <arg value="-notimestamp"/>
+                                        <arg value="-quiet"/>
+                                        <doctitle>${apidocs.doctitle}</doctitle>
+                                        <bottom>${apidocs.bottom}</bottom>
+                                        <header>${apidocs.header}</header>
+                                        <group title="Required Modules" packages="${apidocs.required}"/>
+                                        <group title="Optional Modules" packages="${apidocs.optional}"/>
+                                        <fileset dir="${apidocs.api.src}">
+                                            <include name="**/*.java"/>
+                                        </fileset>
+                                    </javadoc>
+                                    <copy todir="${apidocs.api.dist}" >
+                                        <fileset dir="${project.basedir}/../src/main/javadoc">
+                                            <include name="**/*"/>
+                                        </fileset>
+                                    </copy>
+                                </target>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
