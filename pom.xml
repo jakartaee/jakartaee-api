@@ -108,7 +108,7 @@
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
-        <mojarra.version>4.0.1</mojarra.version>
+        <mojarra.version>4.0.0</mojarra.version>
         
         <!-- Java compiler release (replaces source and target)-->
         <maven.compiler.release>11</maven.compiler.release>
@@ -260,7 +260,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.5.0</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <failOnError>false</failOnError>
                         <additionalJOptions>${javadoc.options}</additionalJOptions>
@@ -433,7 +433,6 @@ module jakarta.faces {
                                             <include name="**/*"/>
                                         </fileset>
                                     </copy>
-
                                     <copy todir="${apidocs.api.src}/jakarta.messaging" >
                                         <fileset dir="${apidocs.api.tmp}/jakarta.jms-api-sources-jar">
                                             <include name="**/*"/>
