@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2012, 2020 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2012, 2023 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -22,14 +22,50 @@
     <parent>
         <groupId>jakarta.platform</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>10.0.0-SNAPSHOT</version>
+        <version>11.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>jakarta.jakartaee-api</artifactId>
     <name>Jakarta EE Platform API</name>
     <description>Jakarta EE Platform API</description>
 
+    <properties>
+        <apidocs.optional>jakarta.xml.bind*,jakarta.xml.soap*,jakarta.xml.ws*</apidocs.optional>
+    </properties>
+
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-sources</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>prepare-sources</id>
+                        <phase>process-sources</phase>
+                    </execution>
+                    <execution>
+                        <id>prepare-sources-web</id>
+                        <phase>process-sources</phase>
+                    </execution>
+                    <execution>
+                        <id>prepare-sources-platform</id>
+                        <phase>process-sources</phase>
+                    </execution>
+                    <execution>
+                        <id>build-javadocs</id>
+                        <phase>compile</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.glassfish.build</groupId>
                 <artifactId>glassfishbuild-maven-plugin</artifactId>
