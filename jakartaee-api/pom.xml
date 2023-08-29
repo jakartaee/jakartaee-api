@@ -95,6 +95,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <sourcepath>${project.build.directory}/sources-dependency
+                        :../jakartaee-core-api/target/sources-dependency
                         :../jakartaee-web-api/target/sources-dependency</sourcepath>
                 </configuration>
             </plugin>
@@ -120,27 +121,32 @@
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>${project.version}</version>
-            <optional>false</optional>
+        </dependency>
+        <!-- Core Profile API -->
+        <!-- We specify it here directly, so it's "closer" in the dependency tree to the user app.
+             This way it will resolve the user's intended version via Maven's resolution mechanism,
+             and integrate well with other dependencies such as MicroProfile -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-core-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>jakarta.jms</groupId>
             <artifactId>jakarta.jms-api</artifactId>
             <version>${jakarta.jms-api.version}</version>
-            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>jakarta.activation</groupId>
             <artifactId>jakarta.activation-api</artifactId>
             <version>${jakarta.activation-api.version}</version>
-            <optional>false</optional>
         </dependency>
 
         <dependency>
             <groupId>jakarta.mail</groupId>
             <artifactId>jakarta.mail-api</artifactId>
             <version>${jakarta.mail-api.version}</version>
-            <optional>false</optional>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -152,7 +158,6 @@
             <groupId>jakarta.resource</groupId>
             <artifactId>jakarta.resource-api</artifactId>
             <version>${jakarta.resource-api.version}</version>
-            <optional>false</optional>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -164,7 +169,6 @@
             <groupId>jakarta.authorization</groupId>
             <artifactId>jakarta.authorization-api</artifactId>
             <version>${jakarta.authorization-api.version}</version>
-            <optional>false</optional>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -176,7 +180,6 @@
             <groupId>jakarta.batch</groupId>
             <artifactId>jakarta.batch-api</artifactId>
             <version>${jakarta.batch-api.version}</version>
-            <optional>false</optional>
              <exclusions>
                  <exclusion>
                      <groupId>*</groupId>

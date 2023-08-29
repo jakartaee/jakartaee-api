@@ -102,32 +102,27 @@
         <dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
-            <version>${jakarta.ws.rs-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.ws.rs-api.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.json</groupId>
             <artifactId>jakarta.json-api</artifactId>
-            <version>${jakarta.json-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.json-api.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.json.bind</groupId>
             <artifactId>jakarta.json.bind-api</artifactId>
-            <version>${jakarta.json.bind-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.json.bind-api.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
-            <version>${jakarta.annotation-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.annotation-api.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.interceptor</groupId>
             <artifactId>jakarta.interceptor-api</artifactId>
-            <version>${jakarta.interceptor-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.interceptor-api.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -138,8 +133,7 @@
         <dependency>
             <groupId>jakarta.enterprise</groupId>
             <artifactId>jakarta.enterprise.cdi-api</artifactId>
-            <version>${jakarta.enterprise.cdi-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.enterprise.cdi-api.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -150,14 +144,12 @@
         <dependency>
             <groupId>jakarta.inject</groupId>
             <artifactId>jakarta.inject-api</artifactId>
-            <version>${jakarta.inject.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.inject.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.enterprise</groupId>
             <artifactId>jakarta.enterprise.lang-model</artifactId>
-            <version>${jakarta.enterprise.cdi-api.cp.version}</version>
-            <optional>false</optional>
+            <version>${jakarta.enterprise.cdi-api.version}</version>
         </dependency>
 
         <!-- Only needed to compile the RESTful Link class as it uses XML Binding -->
