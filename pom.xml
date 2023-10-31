@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.eclipse.ee4j</groupId>
         <artifactId>project</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.9</version>
     </parent>
     <groupId>jakarta.platform</groupId>
     <artifactId>jakartaee-api-parent</artifactId>
@@ -103,7 +103,7 @@
         <mojarra.version>4.0.0</mojarra.version>
         
         <!-- Java compiler release (replaces source and target)-->
-        <maven.compiler.release>11</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
 
 
