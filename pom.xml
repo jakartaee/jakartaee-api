@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.eclipse.ee4j</groupId>
         <artifactId>project</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.9</version>
     </parent>
     <groupId>jakarta.platform</groupId>
     <artifactId>jakartaee-api-parent</artifactId>
@@ -40,7 +40,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jakartaee.version>10.0.0</jakartaee.version>
+        <jakartaee.version>11.0.0</jakartaee.version>
         <extra.excludes />
         <javadoc.options />
 
@@ -103,7 +103,7 @@
         <mojarra.version>4.0.0</mojarra.version>
         
         <!-- Java compiler release (replaces source and target)-->
-        <maven.compiler.release>11</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
 
 
@@ -233,7 +233,7 @@
                                 <parent>
                                     <groupId>org.eclipse.ee4j</groupId>
                                     <artifactId>project</artifactId>
-                                    <version>1.0</version>
+                                    <version>1.0.9</version>
                                 </parent>
                                 <groupId>jakarta.platform</groupId>
                                 <artifactId>${project.artifactId}</artifactId>
