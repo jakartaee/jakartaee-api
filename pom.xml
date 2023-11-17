@@ -83,6 +83,7 @@
         <jakarta.authentication-api.version>3.0.0</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>3.0.0</jakarta.security.enterprise-api.version>
         <jakarta.enterprise.concurrent-api.version>3.0.1</jakarta.enterprise.concurrent-api.version>
+        <jakarta.data.version>1.0.0-M1</jakarta.data.version>
         
         <!--  Full platform -->
         <jakarta.jms-api.version>3.1.0</jakarta.jms-api.version>
@@ -367,6 +368,8 @@
                                             <include name="**/*"/>
                                         </fileset>
                                     </copy>
+                                    <!-- Workaround for https://github.com/jakartaee/data/issues/361 -->
+                                    <move file="${apidocs.api.src}/jakarta-data" tofile="${apidocs.api.src}/jakarta.data"/>
 
                                     <echo file="${apidocs.api.src}/jakarta.faces/module-info.java">
 module jakarta.faces {

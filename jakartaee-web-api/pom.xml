@@ -29,7 +29,7 @@
     <description>Jakarta EE Web Profile API</description>
 
     <properties>
-        <apidocs.modulepath>${jakarta.activation:jakarta.activation-api:jar}:${jakarta.xml.bind:jakarta.xml.bind-api:jar}:${jakarta.xml.soap:jakarta.xml.soap-api:jar}:${jakarta.xml.ws:jakarta.xml.ws-api:jar}:${jakarta.el:jakarta.el-api:jar}</apidocs.modulepath>
+        <apidocs.modulepath>${jakarta.activation:jakarta.activation-api:jar}:${jakarta.xml.bind:jakarta.xml.bind-api:jar}:${jakarta.xml.soap:jakarta.xml.soap-api:jar}:${jakarta.xml.ws:jakarta.xml.ws-api:jar}:${jakarta.el:jakarta.el-api:jar}:${jakarta.data:jakarta-data-api:jar}</apidocs.modulepath>
     </properties>
 
     <build>
@@ -138,6 +138,11 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.data</groupId>
+            <artifactId>jakarta-data-api</artifactId>
+            <version>${jakarta.data.version}</version>
         </dependency>
         <!-- Override from core profile to be non-optional and compiled scope -->
         <dependency>

@@ -220,6 +220,11 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <dependency>
+                <groupId>jakarta.data</groupId>
+                <artifactId>jakarta-data-api</artifactId>
+                <version>${jakarta.data.version}</version>
+            </dependency>
 
             <!-- Full Platform -->
             <dependency>
