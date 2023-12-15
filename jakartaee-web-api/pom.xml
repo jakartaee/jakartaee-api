@@ -144,6 +144,12 @@
             <artifactId>jakarta-data-api</artifactId>
             <version>${jakarta.data.version}</version>
         </dependency>
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-el-api</artifactId>
+            <version>${jakarta.enterprise.cdi-el-api.version}</version>
+        </dependency>
+
         <!-- Override from core profile to be non-optional and compiled scope -->
         <dependency>
             <groupId>jakarta.el</groupId>
@@ -258,7 +264,6 @@
             <artifactId>jakarta.activation-api</artifactId>
             <version>${jakarta.activation-api.version}</version>
             <optional>true</optional>
-            <scope>provided</scope>
         </dependency>
         <!-- work around for GLASSFISH-19861  -->
         <dependency>
@@ -286,7 +291,6 @@
             <artifactId>jakarta.xml.ws-api</artifactId>
             <version>${jakarta.xml.ws-api.version}</version>
             <optional>true</optional>
-            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -299,7 +303,6 @@
             <artifactId>jakarta.xml.soap-api</artifactId>
             <version>${jakarta.xml.soap-api.version}</version>
             <optional>true</optional>
-            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
