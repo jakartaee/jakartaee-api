@@ -86,7 +86,7 @@
         <jakarta.data.version>1.0.0-M1</jakarta.data.version>
         <jakarta.enterprise.cdi-el-api.version>4.1.0-M1</jakarta.enterprise.cdi-el-api.version>
 
-        <!--  Full platform -->
+        <!--  Platform -->
         <jakarta.jms-api.version>3.1.0</jakarta.jms-api.version>
         <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>
         <jakarta.mail-api.version>2.1.2</jakarta.mail-api.version>
@@ -94,7 +94,7 @@
         <jakarta.authorization-api.version>3.0.0-M1</jakarta.authorization-api.version>
         <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
 
-        <!-- Optional APIs -->
+        <!-- Optional APIs Plan to remove in EE 11 M2. -->
         <jakarta.xml.bind-api.version>4.0.1</jakarta.xml.bind-api.version>
         <jakarta.xml.ws-api.version>4.0.1</jakarta.xml.ws-api.version>
         <jakarta.xml.soap-api.version>3.0.1</jakarta.xml.soap-api.version>
