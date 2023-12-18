@@ -451,6 +451,21 @@ module jakarta.faces {
                             </configuration>
                         </execution>
                         <execution>
+                            <!-- workaround for error: package jakarta.xml.ws.wsaddressing has already been annotated @jakarta.xml.bind.annotation.XmlSchema(namespace=W3CEndpointReference.NS, -->
+                            <id>rewrite-problematic-sources</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <target>
+                                    <echo file="${project.build.directory}/sources-dependency/jakarta/xml/ws/wsaddressing/package-info.java"
+                                          message="package jakarta.xml.ws.wsaddressing;${line.separator}"
+                                          append="false" />
+                                </target>
+                            </configuration>
+                        </execution>
+                        <execution>
                             <id>build-javadocs</id>
                             <phase>none</phase>
                             <goals>
