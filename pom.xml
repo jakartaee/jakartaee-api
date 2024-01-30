@@ -83,7 +83,7 @@
         <jakarta.authentication-api.version>3.1.0-M1</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>4.0.0-M1</jakarta.security.enterprise-api.version>
         <jakarta.enterprise.concurrent-api.version>3.1.0-M1</jakarta.enterprise.concurrent-api.version>
-        <jakarta.data.version>1.0.0-M1</jakarta.data.version>
+        <jakarta.data.version>1.0.0-M3</jakarta.data.version>
         <jakarta.enterprise.cdi-el-api.version>4.1.0-M1</jakarta.enterprise.cdi-el-api.version>
 
         <!--  Platform -->
@@ -373,8 +373,6 @@
                                             <include name="**/*"/>
                                         </fileset>
                                     </copy>
-                                    <!-- Workaround for https://github.com/jakartaee/data/issues/361 -->
-                                    <move file="${apidocs.api.src}/jakarta-data" tofile="${apidocs.api.src}/jakarta.data"/>
                                     <move file="${apidocs.api.src}/jakarta.enterprise.cdi-el" tofile="${apidocs.api.src}/jakarta.cdi.el"/>
 
                                     <copy todir="${apidocs.api.src}/jakarta.faces" >
