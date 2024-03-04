@@ -88,8 +88,8 @@
 
         <!--  Platform -->
         <jakarta.jms-api.version>3.1.0</jakarta.jms-api.version>
-        <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>
-        <jakarta.mail-api.version>2.1.2</jakarta.mail-api.version>
+        <jakarta.activation-api.version>2.1.3</jakarta.activation-api.version>
+        <jakarta.mail-api.version>2.1.3</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.1.0</jakarta.resource-api.version>
         <jakarta.authorization-api.version>3.0.0-M1</jakarta.authorization-api.version>
         <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
@@ -104,7 +104,7 @@
 
         <!-- Compile-time dependencies -->
         <mojarra.version>4.1.0-M1</mojarra.version>
-        
+
         <!-- Java compiler release (replaces source and target)-->
         <maven.compiler.release>21</maven.compiler.release>
     </properties>
