@@ -106,7 +106,7 @@
         <mojarra.version>4.1.0-M1</mojarra.version>
 
         <!-- Java compiler release (replaces source and target)-->
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
 
 
