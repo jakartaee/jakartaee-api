@@ -67,7 +67,7 @@
         <jakarta.inject.version>2.0.1</jakarta.inject.version>
         <jakarta.interceptor-api.version>2.2.0-M1</jakarta.interceptor-api.version>
         <jakarta.enterprise.cdi-api.version>4.1.0</jakarta.enterprise.cdi-api.version>
-        <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
+        <jakarta.ws.rs-api.version>4.0.0</jakarta.ws.rs-api.version>
 
         <!-- Web Profile -->
         <jakarta.servlet-api.version>6.1.0-M2</jakarta.servlet-api.version>
