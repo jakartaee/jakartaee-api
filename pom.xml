@@ -50,8 +50,6 @@
         <apidocs.api.dist>${project.build.directory}/api-javadoc</apidocs.api.dist>
         <apidocs.modulepath/>
         <apidocs.required>*</apidocs.required>
-        <apidocs.optional/>
-
         <apidocs.windowtitle>${project.name}</apidocs.windowtitle>
         <apidocs.doctitle>${project.name}</apidocs.doctitle>
         <apidocs.header><![CDATA[<br>${project.name} v${project.version}]]></apidocs.header>
@@ -93,11 +91,6 @@
         <jakarta.resource-api.version>2.1.0</jakarta.resource-api.version>
         <jakarta.authorization-api.version>3.0.0</jakarta.authorization-api.version>
         <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
-
-        <!-- Optional APIs Plan to remove in EE 11 M3. -->
-        <jakarta.xml.bind-api.version>4.0.1</jakarta.xml.bind-api.version>
-        <jakarta.xml.ws-api.version>4.0.1</jakarta.xml.ws-api.version>
-        <jakarta.xml.soap-api.version>3.0.1</jakarta.xml.soap-api.version>
 
         <!-- Other dependencies -->
         <copyright-plugin.version>1.50</copyright-plugin.version>
@@ -381,8 +374,31 @@
                                         </fileset>
                                     </copy>
 
+                                    <delete file="${apidocs.api.src}/jakarta.faces/com/sun/faces/application/annotation/DelegatedWebServiceRefScanner.java"/>
+                                    <delete file="${apidocs.api.src}/jakarta.faces/com/sun/faces/application/annotation/WebServiceRefHandler.java"/>
+                                    <delete file="${apidocs.api.src}/jakarta.faces/com/sun/faces/application/annotation/WebServiceRefScanner.java"/>
+
+                                    <!-- Below is a Workaround for https://github.com/jakartaee/faces/issues/1913 (jax-ws require removed) -->
                                     <echo file="${apidocs.api.src}/jakarta.faces/module-info.java">
 module jakarta.faces {
+    requires jakarta.inject;
+    requires jakarta.validation;
+    requires java.logging;
+    requires java.naming;
+
+    requires static jakarta.cdi;
+    requires static jakarta.cdi.el;
+    requires static jakarta.el;
+    requires static jakarta.servlet;
+    requires static jakarta.websocket.client;
+    requires static jakarta.websocket;
+    requires static jakarta.persistence;
+    requires static jakarta.ejb;
+    requires static jakarta.json;
+    requires transitive java.desktop;
+    requires transitive java.sql;
+    requires transitive java.xml;
+
     exports jakarta.faces;
     exports jakarta.faces.annotation;
     exports jakarta.faces.application;
@@ -405,23 +421,6 @@ module jakarta.faces {
     exports jakarta.faces.view;
     exports jakarta.faces.view.facelets;
     exports jakarta.faces.webapp;
-
-    requires java.logging;
-    requires jakarta.el;
-    requires jakarta.cdi;
-    requires jakarta.cdi.el;
-    requires jakarta.servlet;
-    requires jakarta.validation;
-    requires jakarta.websocket;
-    requires jakarta.websocket.client;
-    requires java.desktop;
-    requires java.sql;
-    requires java.naming;
-    requires jakarta.inject;
-    requires jakarta.persistence;
-    requires jakarta.ejb;
-    requires jakarta.json;
-    requires jakarta.xml.ws;
 }
                                     </echo>
                                 </target>
@@ -445,21 +444,6 @@ module jakarta.faces {
                                             <include name="**/*"/>
                                         </fileset>
                                     </copy>
-                                </target>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <!-- workaround for error: package jakarta.xml.ws.wsaddressing has already been annotated @jakarta.xml.bind.annotation.XmlSchema(namespace=W3CEndpointReference.NS, -->
-                            <id>rewrite-problematic-sources</id>
-                            <phase>prepare-package</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <target>
-                                    <echo file="${project.build.directory}/sources-dependency/jakarta/xml/ws/wsaddressing/package-info.java"
-                                          message="package jakarta.xml.ws.wsaddressing;${line.separator}"
-                                          append="false" />
                                 </target>
                             </configuration>
                         </execution>
@@ -492,7 +476,6 @@ module jakarta.faces {
                                         <bottom>${apidocs.bottom}</bottom>
                                         <header>${apidocs.header}</header>
                                         <group title="Required Modules" packages="${apidocs.required}"/>
-                                        <group title="Optional Modules" packages="${apidocs.optional}"/>
                                         <fileset dir="${apidocs.api.src}">
                                             <include name="**/*.java"/>
                                         </fileset>
