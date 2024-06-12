@@ -71,7 +71,7 @@
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>4.0.0</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>3.0.0</jakarta.servlet.jsp.jstl-api.version>
-        <jakarta.faces-api.version>4.1.0-M2</jakarta.faces-api.version>
+        <jakarta.faces-api.version>4.1.0</jakarta.faces-api.version>
         <jakarta.el-api.version>6.0.0</jakarta.el-api.version>
         <jakarta.websocket-api.version>2.2.0</jakarta.websocket-api.version>
         <jakarta.ejb-api.version>4.0.1</jakarta.ejb-api.version>
@@ -79,9 +79,9 @@
         <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
         <jakarta.validation-api.version>3.1.0</jakarta.validation-api.version>
         <jakarta.authentication-api.version>3.1.0-M1</jakarta.authentication-api.version>
-        <jakarta.security.enterprise-api.version>4.0.0-M2</jakarta.security.enterprise-api.version>
-        <jakarta.enterprise.concurrent-api.version>3.1.0-RC2</jakarta.enterprise.concurrent-api.version>
-        <jakarta.data.version>1.0.0-M4</jakarta.data.version>
+        <jakarta.security.enterprise-api.version>4.0.0</jakarta.security.enterprise-api.version>
+        <jakarta.enterprise.concurrent-api.version>3.1.0</jakarta.enterprise.concurrent-api.version>
+        <jakarta.data.version>1.0.0</jakarta.data.version>
         <jakarta.enterprise.cdi-el-api.version>4.1.0</jakarta.enterprise.cdi-el-api.version>
 
         <!--  Platform -->
