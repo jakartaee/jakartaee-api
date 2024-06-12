@@ -22,7 +22,8 @@ Building
 
 Prerequisites:
 
-* JDK11+ (Jakarta EE 10 and above)
+* JDK17+ (Jakarta EE 11 and above)
+* JDK11+ (Jakarta EE 10)
 * JDK8+ (Jakarta EE 8, 9, and 9.1)
 * Maven 3.0.3+
 
