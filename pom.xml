@@ -96,7 +96,7 @@
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
-        <mojarra.version>4.1.0-M1</mojarra.version>
+        <mojarra.version>4.1.0</mojarra.version>
 
         <!-- Java compiler release (replaces source and target)-->
         <maven.compiler.release>17</maven.compiler.release>
