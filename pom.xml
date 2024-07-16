@@ -367,11 +367,62 @@
                                         </fileset>
                                     </copy>
                                     <move file="${apidocs.api.src}/jakarta.enterprise.cdi-el" tofile="${apidocs.api.src}/jakarta.cdi.el"/>
+
                                     <copy todir="${apidocs.api.src}/jakarta.faces" >
                                         <fileset dir="${apidocs.api.tmp}/jakarta.faces-api-sources-jar">
                                             <include name="**/*" />
                                         </fileset>
                                     </copy>
+
+                                    <delete file="${apidocs.api.src}/jakarta.faces/com/sun/faces/application/annotation/DelegatedWebServiceRefScanner.java"/>
+                                    <delete file="${apidocs.api.src}/jakarta.faces/com/sun/faces/application/annotation/WebServiceRefHandler.java"/>
+                                    <delete file="${apidocs.api.src}/jakarta.faces/com/sun/faces/application/annotation/WebServiceRefScanner.java"/>
+
+                                    <!-- Below is a Workaround for https://github.com/jakartaee/faces/issues/1913 (jax-ws require removed) -->
+                                    <echo file="${apidocs.api.src}/jakarta.faces/module-info.java">
+module jakarta.faces {
+    requires jakarta.inject;
+    requires jakarta.validation;
+    requires java.logging;
+    requires java.naming;
+
+    requires static jakarta.cdi;
+    requires static jakarta.cdi.el;
+    requires static jakarta.el;
+    requires static jakarta.servlet;
+    requires static jakarta.websocket.client;
+    requires static jakarta.websocket;
+    requires static jakarta.persistence;
+    requires static jakarta.ejb;
+    requires static jakarta.json;
+    requires transitive java.desktop;
+    requires transitive java.sql;
+    requires transitive java.xml;
+
+    exports jakarta.faces;
+    exports jakarta.faces.annotation;
+    exports jakarta.faces.application;
+    exports jakarta.faces.component;
+    exports jakarta.faces.component.behavior;
+    exports jakarta.faces.component.html;
+    exports jakarta.faces.component.search;
+    exports jakarta.faces.component.visit;
+    exports jakarta.faces.context;
+    exports jakarta.faces.convert;
+    exports jakarta.faces.el;
+    exports jakarta.faces.event;
+    exports jakarta.faces.flow;
+    exports jakarta.faces.flow.builder;
+    exports jakarta.faces.lifecycle;
+    exports jakarta.faces.model;
+    exports jakarta.faces.push;
+    exports jakarta.faces.render;
+    exports jakarta.faces.validator;
+    exports jakarta.faces.view;
+    exports jakarta.faces.view.facelets;
+    exports jakarta.faces.webapp;
+}
+                                    </echo>
                                 </target>
                             </configuration>
                         </execution>
