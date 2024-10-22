@@ -183,6 +183,12 @@
                  </exclusion>
              </exclusions>
         </dependency>
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>${jakarta.xml.ws-api.version}</version>
+            <optional>true</optional>
+        </dependency>
 
         <!-- Compile-time dependencies -->
         <!-- work around for GLASSFISH-19861  -->
