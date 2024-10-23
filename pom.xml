@@ -93,7 +93,6 @@
         <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
 
         <!-- Other dependencies -->
-        <jakarta.xml.ws-api.version>4.0.2</jakarta.xml.ws-api.version>
         <copyright-plugin.version>1.50</copyright-plugin.version>
 
         <!-- Compile-time dependencies -->
