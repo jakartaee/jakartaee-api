@@ -32,10 +32,10 @@
     <description>Jakarta EE API parent</description>
 
     <modules>
-        <module>jakartaee-bom</module>
+<!--        <module>jakartaee-bom</module> -->
         <module>jakartaee-core-api</module>
-        <module>jakartaee-web-api</module>
-        <module>jakartaee-api</module>
+<!--        <module>jakartaee-web-api</module> -->
+<!--        <module>jakartaee-api</module> -->
     </modules>
 
     <properties>
