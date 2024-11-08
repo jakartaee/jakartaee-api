@@ -29,7 +29,7 @@
     <description>Jakarta EE Core Profile API</description>
 
     <properties>
-        <apidocs.modulepath>${jakarta.activation:jakarta.activation-api:jar}:${jakarta.xml.bind:jakarta.xml.bind-api:jar}:${jakarta.el:jakarta.el-api:jar}</apidocs.modulepath>
+        <apidocs.modulepath>${jakarta.xml.bind:jakarta.xml.bind-api:jar}:${jakarta.el:jakarta.el-api:jar}</apidocs.modulepath>
     </properties>
 
     <build>
@@ -152,19 +152,6 @@
             <version>${jakarta.enterprise.cdi-api.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>jakarta.activation</groupId>
-            <artifactId>jakarta.activation-api</artifactId>
-            <version>${jakarta.activation-api.version}</version>
-            <optional>true</optional>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
         <!-- Only needed to compile the BeanManager non-Lite usage of EL -->
         <dependency>
             <groupId>jakarta.el</groupId>

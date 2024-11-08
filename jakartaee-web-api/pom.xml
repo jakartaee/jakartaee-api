@@ -29,7 +29,7 @@
     <description>Jakarta EE Web Profile API</description>
 
     <properties>
-        <apidocs.modulepath>${jakarta.activation:jakarta.activation-api:jar}:${jakarta.el:jakarta.el-api:jar}:${jakarta.data:jakarta.data-api:jar}</apidocs.modulepath>
+        <apidocs.modulepath>${jakarta.el:jakarta.el-api:jar}:${jakarta.data:jakarta.data-api:jar}</apidocs.modulepath>
     </properties>
 
     <build>
@@ -252,26 +252,6 @@
             <groupId>jakarta.enterprise.concurrent</groupId>
             <artifactId>jakarta.enterprise.concurrent-api</artifactId>
             <version>${jakarta.enterprise.concurrent-api.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.activation</groupId>
-            <artifactId>jakarta.activation-api</artifactId>
-            <version>${jakarta.activation-api.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <!-- work around for GLASSFISH-19861  -->
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>jakarta.faces</artifactId>
-            <version>${mojarra.version}</version>
-            <optional>true</optional>
-            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
