@@ -77,7 +77,7 @@
         <jakarta.ejb-api.version>4.0.1</jakarta.ejb-api.version>
         <jakarta.transaction-api.version>2.0.1</jakarta.transaction-api.version>
         <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
-        <jakarta.validation-api.version>3.1.0</jakarta.validation-api.version>
+        <jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
         <jakarta.authentication-api.version>3.1.0</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>4.0.0</jakarta.security.enterprise-api.version>
         <jakarta.enterprise.concurrent-api.version>3.1.1</jakarta.enterprise.concurrent-api.version>
