@@ -22,7 +22,7 @@
     <parent>
         <groupId>jakarta.platform</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>11.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <artifactId>jakarta.jakartaee-bom</artifactId>
     <packaging>pom</packaging>
@@ -31,6 +31,15 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.7.0</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>bom</flattenMode>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.glassfish.build</groupId>
                 <artifactId>glassfishbuild-maven-plugin</artifactId>
