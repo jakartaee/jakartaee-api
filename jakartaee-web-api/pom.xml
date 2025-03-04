@@ -115,7 +115,7 @@
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-core-api</artifactId>
-            <version>${project.version}</version>
+            <version>${jakartaee.core-api.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.servlet</groupId>
