@@ -22,7 +22,7 @@
     <parent>
         <groupId>jakarta.platform</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>11.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <artifactId>jakarta.jakartaee-api</artifactId>
     <name>Jakarta EE Platform API</name>
@@ -116,7 +116,7 @@
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
-            <version>${project.version}</version>
+            <version>${jakartaee.web-api.version}</version>
         </dependency>
         <!-- Core Profile API -->
         <!-- We specify it here directly, so it's "closer" in the dependency tree to the user app.
@@ -125,7 +125,7 @@
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-core-api</artifactId>
-            <version>${project.version}</version>
+            <version>${jakartaee.core-api.version}</version>
         </dependency>
 
         <dependency>
