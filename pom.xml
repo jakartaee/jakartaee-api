@@ -291,6 +291,7 @@
                         <javadocDirectory>${project.basedir}/../src/main/javadoc</javadocDirectory>
                         <attach>true</attach>
                         <doclint>none</doclint>
+                        <quiet>true</quiet>
                         <doctitle>${apidocs.doctitle}</doctitle>
                         <windowtitle>${apidocs.windowtitle}</windowtitle>
                         <header>${apidocs.header}</header>
