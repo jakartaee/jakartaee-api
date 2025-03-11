@@ -28,6 +28,10 @@
     <name>Jakarta EE Platform API</name>
     <description>Jakarta EE Platform API</description>
 
+    <properties>
+        <maven.deploy.skip>${platform.deploy.skip}</maven.deploy.skip>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
