@@ -28,6 +28,10 @@
     <name>Jakarta EE Platform API</name>
     <description>Jakarta EE Platform API</description>
 
+    <properties>
+        <maven.deploy.skip>${platform.deploy.skip}</maven.deploy.skip>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -107,13 +111,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>${platform.deploy.skip}</skip>
-                </configuration>
             </plugin>
         </plugins>
     </build>

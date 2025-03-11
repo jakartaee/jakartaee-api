@@ -45,6 +45,10 @@
         <extra.excludes />
         <javadoc.options />
         <parent.deploy.skip>true</parent.deploy.skip>
+        <bom.deploy.skip>false</bom.deploy.skip>
+        <coreprofile.deploy.skip>false</coreprofile.deploy.skip>
+        <webprofile.deploy.skip>false</webprofile.deploy.skip>
+        <platform.deploy.skip>false</platform.deploy.skip>
 
         <apidocs.api.src>${project.build.directory}/api-sources</apidocs.api.src>
         <apidocs.api.tmp>${project.build.directory}/api-sources-tmp</apidocs.api.tmp>

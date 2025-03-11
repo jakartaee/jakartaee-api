@@ -30,6 +30,7 @@
 
     <properties>
         <apidocs.modulepath>${jakarta.xml.bind:jakarta.xml.bind-api:jar}:${jakarta.el:jakarta.el-api:jar}</apidocs.modulepath>
+        <maven.deploy.skip>${coreprofile.deploy.skip}</maven.deploy.skip>
     </properties>
 
     <build>
@@ -94,13 +95,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>${coreprofile.deploy.skip}</skip>
-                </configuration>
             </plugin>
         </plugins>
     </build>

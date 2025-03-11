@@ -30,6 +30,7 @@
 
     <properties>
         <apidocs.modulepath>${jakarta.el:jakarta.el-api:jar}:${jakarta.data:jakarta.data-api:jar}</apidocs.modulepath>
+        <maven.deploy.skip>${webprofile.deploy.skip}</maven.deploy.skip>
     </properties>
 
     <build>
@@ -106,13 +107,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>${webprofile.deploy.skip}</skip>
-                </configuration>
             </plugin>
         </plugins>
     </build>
