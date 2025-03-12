@@ -22,7 +22,7 @@
     <parent>
         <groupId>jakarta.platform</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>${revision}</version>
+        <version>11.0.0-x</version>
     </parent>
     <artifactId>jakarta.jakartaee-web-api</artifactId>
     <name>Jakarta EE Web Profile API</name>
