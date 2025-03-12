@@ -60,10 +60,6 @@
                         <id>prepare-sources-platform</id>
                         <phase>process-sources</phase>
                     </execution>
-                    <execution>
-                        <id>build-javadocs</id>
-                        <phase>compile</phase>
-                    </execution>
                 </executions>
             </plugin>
             <plugin>

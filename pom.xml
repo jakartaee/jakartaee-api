@@ -283,7 +283,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.11.2</version>
                     <configuration>
                         <failOnError>true</failOnError>
                         <additionalJOptions>${javadoc.options}</additionalJOptions>
@@ -426,47 +426,6 @@
                                     </copy>
                                     <copy todir="${apidocs.api.src}/jakarta.messaging" >
                                         <fileset dir="${apidocs.api.tmp}/jakarta.jms-api-sources-jar">
-                                            <include name="**/*"/>
-                                        </fileset>
-                                    </copy>
-                                </target>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>build-javadocs</id>
-                            <phase>none</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <target>
-                                    <mkdir dir="${apidocs.api.dist}"/>
-                                    <javadoc destdir="${apidocs.api.dist}"
-                                             modulesourcepath="${apidocs.api.src}"
-                                             modulepath="${apidocs.modulepath}"
-                                             author="false"
-                                             docfilessubdirs="true"
-                                             failonerror="true"
-                                             serialwarn="true"
-                                             source="${maven.compiler.release}"
-                                             splitindex="true"
-                                             use="true"
-                                             windowtitle="${apidocs.windowtitle}"
-                                    >
-                                        <arg value="-J-Xmx256m"/>
-                                        <arg value="-Xdoclint:none"/>
-                                        <arg value="-notimestamp"/>
-                                        <arg value="-quiet"/>
-                                        <doctitle>${apidocs.doctitle}</doctitle>
-                                        <bottom>${apidocs.bottom}</bottom>
-                                        <header>${apidocs.header}</header>
-                                        <group title="Required Modules" packages="${apidocs.required}"/>
-                                        <fileset dir="${apidocs.api.src}">
-                                            <include name="**/*.java"/>
-                                        </fileset>
-                                    </javadoc>
-                                    <copy todir="${apidocs.api.dist}" >
-                                        <fileset dir="${project.basedir}/../src/main/javadoc">
                                             <include name="**/*"/>
                                         </fileset>
                                     </copy>

@@ -57,10 +57,6 @@
                         <id>prepare-sources-web</id>
                         <phase>process-sources</phase>
                     </execution>
-                    <execution>
-                        <id>build-javadocs</id>
-                        <phase>compile</phase>
-                    </execution>
                 </executions>
             </plugin>
             <plugin>
