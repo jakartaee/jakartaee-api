@@ -59,8 +59,7 @@
         <apidocs.doctitle>${project.name}</apidocs.doctitle>
         <apidocs.header><![CDATA[<br>${project.name} v${project.version}]]></apidocs.header>
         <apidocs.bottom><![CDATA[
-<p align="left">Copyright &#169; 2018, 2024 Eclipse Foundation.<br>Use is subject to
-<a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]></apidocs.bottom>
+<p align="left">Copyright &#169; 2018, 2025 Eclipse Foundation.<br>Use is subject to <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]></apidocs.bottom>
 
         <!-- For independent relases set a previous release version e.g.,
             mvn -Drevision=11.0.0-RC3 -Djakartaee.core-api.version=11.0.0 ...
