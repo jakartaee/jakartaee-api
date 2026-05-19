@@ -83,7 +83,7 @@
         <jakarta.annotation-api.version>3.0.0</jakarta.annotation-api.version>
         <jakarta.inject.version>2.0.1</jakarta.inject.version>
         <jakarta.interceptor-api.version>2.2.0</jakarta.interceptor-api.version>
-        <jakarta.enterprise.cdi-api.version>5.0.0.Beta1</jakarta.enterprise.cdi-api.version>
+        <jakarta.enterprise.cdi-api.version>5.0.0.Alpha1</jakarta.enterprise.cdi-api.version>
         <jakarta.ws.rs-api.version>4.0.0</jakarta.ws.rs-api.version>
 
         <!-- Web Profile -->
@@ -101,7 +101,7 @@
         <jakarta.security.enterprise-api.version>4.0.0</jakarta.security.enterprise-api.version>
         <jakarta.enterprise.concurrent-api.version>3.1.1</jakarta.enterprise.concurrent-api.version>
         <jakarta.data.version>1.0.1</jakarta.data.version>
-        <jakarta.enterprise.cdi-el-api.version>5.0.0.Beta1</jakarta.enterprise.cdi-el-api.version>
+        <jakarta.enterprise.cdi-el-api.version>5.0.0.Alpha1</jakarta.enterprise.cdi-el-api.version>
 
         <!--  Platform -->
         <jakarta.jms-api.version>3.1.0</jakarta.jms-api.version>
