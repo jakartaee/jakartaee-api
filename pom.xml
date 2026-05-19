@@ -49,7 +49,7 @@
     </modules>
 
     <properties>
-        <revision>11.0.0-SNAPSHOT</revision>
+        <revision>12.0.0-SNAPSHOT</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakartaee.version>${revision}</jakartaee.version>
         <extra.excludes />
