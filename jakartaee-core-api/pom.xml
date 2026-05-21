@@ -138,9 +138,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.cdi-api</artifactId>
-            <version>${jakarta.enterprise.cdi-api.version}</version>
+            <groupId>jakarta.cdi</groupId>
+            <artifactId>jakarta.cdi-api</artifactId>
+            <version>${jakarta.cdi-api.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -154,9 +154,9 @@
             <version>${jakarta.inject.version}</version>
         </dependency>
         <dependency>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.lang-model</artifactId>
-            <version>${jakarta.enterprise.cdi-api.version}</version>
+            <groupId>jakarta.cdi</groupId>
+            <artifactId>jakarta.cdi-lang-model-api</artifactId>
+            <version>${jakarta.cdi-api.version}</version>
         </dependency>
 
         <!-- Only needed to compile the BeanManager non-Lite usage of EL -->

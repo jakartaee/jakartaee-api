@@ -100,9 +100,9 @@
                 <version>${jakarta.interceptor-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.enterprise</groupId>
-                <artifactId>jakarta.enterprise.cdi-api</artifactId>
-                <version>${jakarta.enterprise.cdi-api.version}</version>
+                <groupId>jakarta.cdi</groupId>
+                <artifactId>jakarta.cdi-api</artifactId>
+                <version>${jakarta.cdi-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.inject</groupId>
@@ -110,9 +110,9 @@
                 <version>${jakarta.inject.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.enterprise</groupId>
-                <artifactId>jakarta.enterprise.lang-model</artifactId>
-                <version>${jakarta.enterprise.cdi-api.version}</version>
+                <groupId>jakarta.cdi</groupId>
+                <artifactId>jakarta.cdi.lang-model-api</artifactId>
+                <version>${jakarta.cdi-api.version}</version>
             </dependency>
 
             <!-- Web Profile -->
@@ -132,9 +132,9 @@
                 <version>${jakarta.data.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.enterprise</groupId>
-                <artifactId>jakarta.enterprise.cdi-el-api</artifactId>
-                <version>${jakarta.enterprise.cdi-el-api.version}</version>
+                <groupId>jakarta.cdi</groupId>
+                <artifactId>jakarta.cdi-el-api</artifactId>
+                <version>${jakarta.cdi-el-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>jakarta.el</groupId>

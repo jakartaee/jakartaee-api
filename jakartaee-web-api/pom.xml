@@ -148,9 +148,9 @@
             <version>${jakarta.data.version}</version>
         </dependency>
         <dependency>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.cdi-el-api</artifactId>
-            <version>${jakarta.enterprise.cdi-el-api.version}</version>
+            <groupId>jakarta.cdi</groupId>
+            <artifactId>jakarta.cdi-el-api</artifactId>
+            <version>${jakarta.cdi-el-api.version}</version>
         </dependency>
 
         <!-- Override from core profile to be non-optional and compiled scope -->
