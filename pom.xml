@@ -354,7 +354,8 @@
                                     <copy todir="${apidocs.api.src}" >
                                         <fileset dir="${apidocs.api.tmp}">
                                             <include name="*-api-sources-jar/**"/>
-                                            <exclude name="jakarta.enterprise.cdi-api-sources-jar/**"/>
+                                            <exclude name="jakarta.cdi-api-sources-jar/**"/>
+                                            <exclude name="jakarta.cdi-lang-model-api-sources-jar/**"/>
                                             <!-- web-profile -->
                                             <exclude name="jakarta.authentication-api-sources-jar/**"/>
                                             <exclude name="jakarta.enterprise.concurrent-api-sources-jar/**"/>
