@@ -99,7 +99,7 @@
         <jakarta.validation-api.version>4.0.0-M1</jakarta.validation-api.version>
         <jakarta.authentication-api.version>3.1.0</jakarta.authentication-api.version>
         <jakarta.security.enterprise-api.version>5.0.0-M2</jakarta.security.enterprise-api.version>
-        <jakarta.enterprise.concurrent-api.version>3.2.0-M3</jakarta.enterprise.concurrent-api.version>
+        <jakarta.concurrency-api.version>3.2.0-M3</jakarta.concurrency-api.version>
         <jakarta.data.version>1.1.0-M4</jakarta.data.version>
         <jakarta.cdi-el-api.version>5.0.0</jakarta.cdi-el-api.version>
 
@@ -357,7 +357,7 @@
                                             <exclude name="jakarta.enterprise.cdi-api-sources-jar/**"/>
                                             <!-- web-profile -->
                                             <exclude name="jakarta.authentication-api-sources-jar/**"/>
-                                            <exclude name="jakarta.enterprise.concurrent-api-sources-jar/**"/>
+                                            <exclude name="jakarta.concurrency-api-sources-jar/**"/>
                                             <exclude name="jakarta.security.enterprise-api-sources-jar/**"/>
                                             <exclude name="jakarta.websocket-client-api-sources-jar/**"/>
                                             <exclude name="jakarta.faces-api-sources-jar/**"/>
@@ -397,7 +397,7 @@
                                         </fileset>
                                     </copy>
                                     <copy todir="${apidocs.api.src}/jakarta.concurrency" >
-                                        <fileset dir="${apidocs.api.tmp}/jakarta.enterprise.concurrent-api-sources-jar">
+                                        <fileset dir="${apidocs.api.tmp}/jakarta.concurrency-api-sources-jar">
                                             <include name="**/*"/>
                                         </fileset>
                                     </copy>
