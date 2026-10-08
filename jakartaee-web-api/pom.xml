@@ -254,7 +254,7 @@
         <dependency>
             <groupId>jakarta.enterprise.concurrent</groupId>
             <artifactId>jakarta.enterprise.concurrent-api</artifactId>
-            <version>${jakarta.enterprise.concurrent-api.version}</version>
+            <version>${jakarta.concurrency-api.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
